@@ -1,0 +1,118 @@
+/* 新規登録・ログイン・ユーザー情報編集
+---------------------------------------------- */
+
+.login{
+  width: 75%;
+}
+
+.form__wrapper{
+  width: 70%;
+  height: 90%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.form__top{
+  width: 30%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 45px;
+  font-size: 30px;
+  color: #565656;
+  border-bottom: 5px solid #84b8eb ;
+}
+
+form{
+  width: 50%;
+  margin: 50px auto ;
+}
+
+.need{
+  height: 20px;
+  padding: 3px;
+  text-align: center;
+  background-color: red;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  margin: 4px 0 0 10px;
+}
+
+.field{
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.field__flex{
+  display: flex;
+}
+
+#img_prev{
+  display: block;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #aaa;
+  border-radius: 100%;
+  object-fit: cover;
+  padding: 5px;
+  margin: 10px auto;
+}
+
+.field input,textarea{
+  width: 100%;
+  border: 1.5px solid #aaaaaa;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+}
+
+textarea{
+  height: 100px;
+}
+
+input{
+  padding: 10px;
+  font-size: 17px;
+}
+
+.field label{
+  color: #818181;
+  font-size: 16px;
+}
+
+.form__btn{
+  width: 50%;
+  text-align: center;
+  border: none;
+  background-color: #84b8eb;
+  color: #FFF;
+  border-radius: 5px;
+}
+
+/* 編集機能でのみ使用 */
+.login__attention{
+  width: 600px;
+  margin: 50px auto;
+  font-size: 17px;
+  color: #565656;
+}
+
+.login__attention span{
+  color: #84b8eb;
+  margin-right: 15px;
+}
+
+.account__destroy{
+  width: 50%;
+  margin: 100px auto 120px;
+}
+
+.delete__btn{
+  width: 100%;
+  text-align: center;
+  border: none;
+  background-color: #818181;
+  color: #FFF;
+  border-radius: 5px;
+}

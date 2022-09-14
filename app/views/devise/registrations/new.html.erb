@@ -1,29 +1,81 @@
-<h2>Sign up</h2>
+<%= link_to image_tag("logo2.png", class:"logo__pc"), "/" %>
+<div class="topver"></div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="main">
+  <div class="main-contents login">
+   <div class="form__wrapper">
+   
+      <div class="form__top">
+       新規登録
+      </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+         <%= render 'shared/error_messages', model: f.object %><br>
+
+         <div class="field">
+              <div class="field__flex">
+                  <%= f.label :email, "メールアドレス" %>
+                  <div class="need"> 必須 </div><br />
+               </div>
+               <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+         </div>
+
+         <div class="field">
+              <div class="field__flex">
+                  <%= f.label :password , "パスワード（英数字6文字以上）" %>
+                  <div class="need">必須</div><br />
+              </div>
+              <%= f.password_field :password , id:"user_password", autocomplete: "new-password" %>
+         </div>
+
+         <div class="field">
+              <div class="field__flex">
+                  <%= f.label :password_confirmation, "パスワード再入力" %>
+                  <div class="need">必須</div><br />
+              </div>
+              <%= f.password_field :password_confirmation, id:"user_password_confirmation", autocomplete: "new-password" %>
+         </div>
+
+         <br><br><br>
+
+         <div class="field">
+              <div class="field__flex">
+                  <%= f.label :username, "ユーザー名（10文字以内）" %>
+                  <div class="need"> 必須 </div><br />
+             </div>
+             <%= f.text_field :username, id:"username", placeholder:"例) furima太郎", maxlength:"40" %>
+         </div>
+
+
+         <div class="field">
+            <%= f.label :image, "プロフィール画像　(デフォルトは猫です)" %><br/>
+            <% if @user.image.present? %>
+                <%= image_tag @user.image, id: :img_prev %>
+            <% else %>
+                <%= image_tag "default.png", id: :img_prev %>
+            <% end %>
+             <%= f.file_field :image, id: :user_img  %>
+         </div>
+
+
+         <div class="field">
+            <%= f.label :profile, "プロフィール"%><br />
+            <%= f.text_area :profile, class: :form__text, id:"user_profile",
+                             placeholder: "例
+１歳の娘がいます。
+最近クレヨン遊びにハマっていて
+部屋中がキャンバスになっています！！" %>
+         </div>
+
+
+         <div class="field">
+            <%= f.submit "新規登録", class: :form__btn  %>
+         </div>
+
+     <% end %>
+
+
+
+   </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
