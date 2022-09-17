@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header{
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.little-garden-icon{
+  width: 300px;
+  height: 100px;
+}
+
+.logo-pc{
+  width: 300px;
+  height: 100px;
+  display: block;
+  cursor: pointer;
+}
+
+.search-bar-contents{
+  width: 500px;
+  display: inline;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-form {
+  width: 500px;
+  height: 5vh;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.search-form>.input-box {
+  width: 100%;
+  height: 5vh;
+  padding-left: 10px;
+}
+
+.search-button {
+  width: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: #087b0a;
+  padding: 8px;
+}
+
+.search-icon {
+  width: 100%;
+}
+
+.lists-left {
+  display: flex;
+  min-width: 200px;
+
+}
+
+.menu-list {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #818181;
+  cursor: pointer;
+  position: relative;
+}
+
+.category-list {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #818181;
+}
+
+.q-and-a-list {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #818181;
+}
+
+
+.menu-list:hover,
+.category-list:hover,
+.q-and-a-list:hover{
+  color: black;
+}
+
+.show-lists{
+  position: absolute;
+  width: 180px;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+.pull-down-list{
+  color: #73735a;
+  font-size: 17px;
+  font-weight: bold;
+  display: block;
+}
+
+.pull-down-list:hover{
+  color: #FFF;
+  background-color: #087b0a;
+  border-radius: 5px;
+}
+
+.hidden{
+  display: none;
+  position : fixed ;
+  z-index : 10;
+}
+
+.navig{
+  width: 400px; 
+  height: 120px;
+  display: flex;
+  justify-content : space-around ;
+  align-items : center ;
+  padding: 5px;
+}
+
+.header-user-name{
+  width: auto;
+  height: 75px;
+  color: #818181;
+  font-size: 17px;
+  line-height: 75px;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.nav-mobile{
+  display: none;
+}
+
+.nav-pc{
+  display: block;
+}
+
+.header-user-img{
+  width: 75px;
+  height: 75px;
+  border: 1px solid #aaaaaa;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-right: 15px;
+  padding: 3px;
+}
+
+.nav-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.sign-up-btn,
+.log-in-btn,
+.log-out-btn{
+
+ background-color: #ebeced;
+ color: #818181;
+ font-size: 17px;
+ padding: 15px 15px;
+ margin-right: 15px;
+ border-radius: 5px;
+ cursor: pointer;
+}
+
+.sign-up-btn:hover,
+.log-in-btn:hover,
+.log-out-btn:hover{
+  background-color: #087b0a;
+  color: #FFF;
+}
+
+
+
+
+

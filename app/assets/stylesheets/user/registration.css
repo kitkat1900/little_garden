@@ -1,10 +1,11 @@
 /* 新規登録・ログイン・ユーザー情報編集
 ---------------------------------------------- */
 
-.login{
+.main-contents login{
   width: 75%;
 }
 
+.form-wrap,
 .form__wrapper{
   width: 70%;
   height: 90%;
@@ -13,14 +14,15 @@
   margin-bottom: 30px;
 }
 
+.form-header-text,
 .form__top{
   width: 30%;
   text-align: center;
   margin: 0 auto;
-  margin-top: 45px;
+  margin-top: 10px;
   font-size: 30px;
   color: #565656;
-  border-bottom: 5px solid #84b8eb ;
+  border-bottom: 5px solid #087b0a ;
 }
 
 form{
@@ -28,7 +30,8 @@ form{
   margin: 50px auto ;
 }
 
-.need{
+.need,
+.indispensable{
   height: 20px;
   padding: 3px;
   text-align: center;
@@ -36,29 +39,37 @@ form{
   color: #fff;
   font-size: 12px;
   border-radius: 3px;
-  margin: 4px 0 0 10px;
+  margin: 0 0 4px 10px;
 }
 
-.field{
+.field,
+.form-group{
   width: 100%;
   margin-bottom: 30px;
 }
 
-.field__flex{
+.form-text-wrap,
+.input-default,
+.field__flex,
+.form-text{
   display: flex;
 }
 
-#img_prev{
+
+.prev-img{
   display: block;
   width: 150px;
   height: 150px;
   border: 1px solid #aaa;
   border-radius: 100%;
   object-fit: cover;
-  padding: 5px;
+  
   margin: 10px auto;
 }
 
+
+
+.input-default,
 .field input,textarea{
   width: 100%;
   border: 1.5px solid #aaaaaa;
@@ -72,7 +83,7 @@ textarea{
 }
 
 input{
-  padding: 10px;
+  padding: 5px;
   font-size: 17px;
 }
 
@@ -81,8 +92,23 @@ input{
   font-size: 16px;
 }
 
+.register-btn{
+  width: 30%;
+  margin: 0 auto;
+}
+
+.register-green-btn{
+  width: 100%;
+  text-align: center;
+  border: none;
+  background-color: #087b0a;
+  color: #FFF;
+  border-radius: 5px;
+  cursor: pointer
+}
+
 .form__btn{
-  width: 50%;
+  width: 10%;
   text-align: center;
   border: none;
   background-color: #84b8eb;
