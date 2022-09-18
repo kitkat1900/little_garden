@@ -55,7 +55,7 @@ form{
   display: flex;
 }
 
-
+#default-image,
 .prev-img{
   display: block;
   width: 150px;

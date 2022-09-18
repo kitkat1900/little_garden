@@ -1,15 +1,15 @@
-if (document.URL.match(/sign_up/)){
+if (document.URL.match(/users/)){
   document.addEventListener('DOMContentLoaded', () => {
     const createImageHTML = (blob) => {  
       const imageElement = document.getElementById('prev-image'); 
       const blobImage = document.createElement('img'); 
-      blobImage.id ='currentImg'
-      blobImage.setAttribute('class', 'prev-img') 
+      blobImage.id ='default-image'
+      blobImage.setAttribute('class', 'prev-img')
       blobImage.setAttribute('src', blob); 
       imageElement.appendChild(blobImage);
     }; 
     document.getElementById('user-image').addEventListener('change', (e) =>{
-      const imageContent = document.querySelector('#currentImg'); 
+      const imageContent = document.querySelector( '#default-image'); 
       if (imageContent){ 
         imageContent.remove(); 
       } 
