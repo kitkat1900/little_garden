@@ -1,12 +1,6 @@
 /* 新規登録・ログイン・ユーザー情報編集
 ---------------------------------------------- */
-
-.main-contents login{
-  width: 75%;
-}
-
-.form-wrap,
-.form__wrapper{
+.form-wrap{
   width: 70%;
   height: 90%;
   margin: auto;
@@ -14,9 +8,8 @@
   margin-bottom: 30px;
 }
 
-.form-header-text,
-.form__top{
-  width: 30%;
+.form-header-text{
+  width: 70%;
   text-align: center;
   margin: 0 auto;
   margin-top: 10px;
@@ -30,7 +23,6 @@ form{
   margin: 50px auto ;
 }
 
-.need,
 .indispensable{
   height: 20px;
   padding: 3px;
@@ -39,10 +31,9 @@ form{
   color: #fff;
   font-size: 12px;
   border-radius: 3px;
-  margin: 0 0 4px 10px;
+  margin: 0 10px;
 }
 
-.field,
 .form-group{
   width: 100%;
   margin-bottom: 30px;
@@ -50,27 +41,27 @@ form{
 
 .form-text-wrap,
 .input-default,
-.field__flex,
 .form-text{
   display: flex;
 }
 
-
-.prev-img{
+#user-img,
+.user-image,
+.default-image,
+.preview-image,
+#default-image,
+#prev-img{
   display: block;
   width: 150px;
   height: 150px;
   border: 1px solid #aaa;
   border-radius: 100%;
   object-fit: cover;
-  
   margin: 10px auto;
 }
 
-
-
 .input-default,
-.field input,textarea{
+textarea{
   width: 100%;
   border: 1.5px solid #aaaaaa;
   border-radius: 5px;
@@ -104,41 +95,59 @@ input{
   background-color: #087b0a;
   color: #FFF;
   border-radius: 5px;
-  cursor: pointer
-}
-
-.form__btn{
-  width: 10%;
-  text-align: center;
-  border: none;
-  background-color: #84b8eb;
-  color: #FFF;
-  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* 編集機能でのみ使用 */
-.login__attention{
-  width: 600px;
-  margin: 50px auto;
-  font-size: 17px;
-  color: #565656;
-}
-
-.login__attention span{
-  color: #84b8eb;
-  margin-right: 15px;
-}
-
-.account__destroy{
+.account-delete{
   width: 50%;
-  margin: 100px auto 120px;
+  height: 10%;
+  margin: 70px 320px 20px;
 }
 
-.delete__btn{
+.delete-attention{
+  width: 70%;
+  display: flex;
+  margin: 70px 96px 10px;
+  font-size: 17px;
+
+}
+
+.button_to{
+  width: 134.4px;
+}
+
+.delete-btn{
+  width: 30%;
+  margin: 0 auto;
+}
+
+.delete-green-btn{
   width: 100%;
   text-align: center;
   border: none;
   background-color: #818181;
   color: #FFF;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-green-btn:hover{
+  background-color: #087b0a;
+  color: #FFF;
+}
+
+.back-btn{
+  height: 25px;
+  margin-left: 10px;
+}
+
+a[href$="sign_in"] {
+  color: #818181;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a:hover[href$="sign_in"] {
+  color: black;
 }

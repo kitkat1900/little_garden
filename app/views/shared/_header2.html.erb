@@ -1,7 +1,7 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
 <header class="top-page-header">
   <div class="little-garden-icon">
-    <%= link_to (image_tag "logo.png", class:"logo-pc") , root_path %>
+    <%= link_to (image_tag "logo.png", class:"logo-pc") , "/" %>
     <%#= link_to (image_tag "logo_responsive.png", class:"logo__mobile") , root_path %>
   </div>
   <div class='search-bar-contents'>
@@ -17,21 +17,20 @@
                <li><%= link_to"サイトについて", "#" ,class: "pull-down-list" %></li>
                <li><%= link_to"マイページ", "#" ,class: "pull-down-list" %></li>
                <li><%= link_to"投稿する", "#" ,class: "pull-down-list" %></li>
-               <li><%= link_to"設定", edit_user_registration_path ,class: "pull-down-list" %></li>
+               <li><%= link_to"設定", edit_user_registration_path, class: "pull-down-list" %></li>
                <li><%= link_to"ログアウト", destroy_user_session_path, method: :delete, class: "pull-down-list" %></li>
         </ul>
       <li><%= link_to 'カテゴリー', "#", class: "category-list" %></li>
       <li><%= link_to 'Q&A', "#", class: "q-and-a-list" %></li>
     </ul>
   </div>
-  <div class='navig'>
-    
+  <div class='navi'>
     <ul class='nav-right'>
           <%# ログイン時の表示 %>
           <% if user_signed_in? %>
             <li><%= link_to  current_user.username, "#", class: "header-user-name" %></li>
               <% if current_user.image.present?%>
-                <li><%= link_to (image_tag current_user.image.url  , class: "header-user-img"), user_path(current_user) %></li>
+                <li><%= link_to (image_tag current_user.image  , class: "header-user-img"), "#" %></li>
               <% else %>
                 <li><%= link_to (image_tag "default.png" , class: "header-user-img"), "#" %></li>
               <% end %>
