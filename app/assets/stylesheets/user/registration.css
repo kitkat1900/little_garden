@@ -45,12 +45,17 @@ form{
   display: flex;
 }
 
+<<<<<<< HEAD
 #user-img,
 .user-image,
 .default-image,
 .preview-image,
 #default-image,
 #prev-img{
+=======
+#default-image,
+.prev-img{
+>>>>>>> f4a2ef2de8599e0a346b097fd63e1bd519f495a0
   display: block;
   width: 150px;
   height: 150px;
