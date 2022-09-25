@@ -1,0 +1,175 @@
+/* マイページ（users/show）
+---------------------------------------------- */
+.main{
+  width: 100%;
+  height: 100%;
+  background-color: #087b0a;
+  display: flex;
+  justify-content : center ;
+  align-items : center ; 
+}
+
+.main-contents{
+  width: 90%;
+  height: 90%;
+  background-color: #FFF;
+  border-radius: 15px;
+}
+
+.form-top{
+  width: 30%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 45px;
+  font-size: 30px;
+  color: #565656;
+  border-bottom: 5px solid #087b0a ;
+}
+
+.profile{
+  width: 50%;
+  height: 50px;
+  border: none;
+}
+
+.profile p{
+  font-size: 30px;
+  color: #818181;
+}
+
+.profile-main{
+  border: 10px solid #087b0a;
+  width: 70%;
+ 
+  border-radius: 20px;
+ 
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 150px;
+}
+
+.profile-inner{
+  width: 95%;
+
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.profile-user-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  margin-right: 15px;
+}
+
+.profile-user-img{
+  width: 200px;
+  height: 200px;
+  border: 1px solid #aaa;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.profiles-inner-user{
+  width: 70%;
+  height: 100%;
+}
+
+.profile-user-names{
+  width: 70%;
+  height: 40px;
+  margin: auto;
+}
+
+.profile-user-name{
+  font-size: 24px;
+  font-weight: bold;
+  color: #565656;
+  text-align: center;
+  border-bottom: 3px solid #087b0a;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.profile-user-icons{
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: 30px 50px 10px;
+  
+}
+
+.user-icons{
+  width: 100px;
+  height: 120px;
+  margin: 0px 5px;
+  justify-content: center;
+  text-align: center;
+}
+
+.span{
+  display: inline-block;
+}
+
+.user-icon{
+  display: block;
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+
+  border-radius: 100%;
+}
+
+.user-icon:hover{
+  margin: 5px 0 0 0;
+}
+
+.profile-user-follows{
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 20px;
+}
+
+.profile-favorite{
+  height: 30px;
+  line-height: 13px;
+  text-align: center;
+  background-color: #087b0a;
+  color: #FFF;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 4px 8px 1px 0 #529ae2;
+}
+
+.profile-favorite:hover{
+  margin: 4px 1px 8px 0;
+  box-shadow: 4px 8px 0 0 #FFF;
+}
+
+.profile-user-profile{
+  width: 100%;
+
+  border-radius: 5px;
+  margin-top: 0;
+}
+
+.profile-user-prof{
+  
+  margin: 25px;
+  margin: 2em auto; 
+  padding: 1em 1.5em;
+  width: 100%; /*幅の調節*/
+  background-color: #fff; /* 背景色 */
+  border: 4px solid #d8d8d8; /*線の太さ・色*/
+  border-radius: 5%;
+}

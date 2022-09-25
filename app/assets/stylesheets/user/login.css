@@ -1,0 +1,19 @@
+.login-btn {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.login-green-btn {
+  width: 100%;
+  text-align: center;
+  border: none;
+  background-color: #087b0a;
+  color: #FFF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-flash-message {
+  text-align: center;
+  color: red;
+}

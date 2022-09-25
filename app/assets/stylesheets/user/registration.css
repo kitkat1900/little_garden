@@ -1,0 +1,153 @@
+/* 新規登録・ログイン・ユーザー情報編集
+---------------------------------------------- */
+.form-wrap{
+  width: 70%;
+  height: 90%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.form-header-text{
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 30px;
+  color: #565656;
+  border-bottom: 5px solid #087b0a ;
+}
+
+form{
+  width: 50%;
+  margin: 50px auto ;
+}
+
+.indispensable{
+  height: 20px;
+  padding: 3px;
+  text-align: center;
+  background-color: red;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  margin: 0 10px;
+}
+
+.form-group{
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.form-text-wrap,
+.input-default,
+.form-text{
+  display: flex;
+}
+
+#user-img,
+.user-image,
+.default-image,
+.preview-image,
+#default-image,
+#prev-img{
+  display: block;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #aaa;
+  border-radius: 100%;
+  object-fit: cover;
+  margin: 10px auto;
+}
+
+.input-default,
+textarea{
+  width: 100%;
+  border: 1.5px solid #aaaaaa;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+}
+
+textarea{
+  height: 100px;
+}
+
+input{
+  padding: 5px;
+  font-size: 17px;
+}
+
+.field label{
+  color: #818181;
+  font-size: 16px;
+}
+
+.register-btn{
+  width: 30%;
+  margin: 0 auto;
+}
+
+.register-green-btn{
+  width: 100%;
+  text-align: center;
+  border: none;
+  background-color: #087b0a;
+  color: #FFF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 編集機能でのみ使用 */
+.account-delete{
+  width: 50%;
+  height: 10%;
+  margin: 70px 320px 20px;
+}
+
+.delete-attention{
+  width: 70%;
+  display: flex;
+  margin: 70px 96px 10px;
+  font-size: 17px;
+
+}
+
+.button_to{
+  width: 134.4px;
+}
+
+.delete-btn{
+  width: 30%;
+  margin: 0 auto;
+}
+
+.delete-green-btn{
+  width: 100%;
+  text-align: center;
+  border: none;
+  background-color: #818181;
+  color: #FFF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-green-btn:hover{
+  background-color: #087b0a;
+  color: #FFF;
+}
+
+.back-btn{
+  height: 25px;
+  margin-left: 10px;
+}
+
+a[href$="sign_in"] {
+  color: #818181;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a:hover[href$="sign_in"] {
+  color: black;
+}
