@@ -28,7 +28,7 @@
     <ul class='nav-right'>
           <%# ログイン時の表示 %>
           <% if user_signed_in? %>
-            <li><%= link_to  current_user.username, "#", class: "header-user-name" %></li>
+            <li><%= link_to  current_user.username, "/users/#{current_user.id}", class: "header-user-name" %></li>
               <% if current_user.image.present?%>
                 <li><%= link_to (image_tag current_user.image  , class: "header-user-img"), "#" %></li>
               <% else %>

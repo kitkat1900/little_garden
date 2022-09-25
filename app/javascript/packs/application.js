@@ -9,7 +9,12 @@ require("@rails/activestorage").start()
 require("channels")
 require("../nav")
 //require('../preview')//
+require('jquery')
+import '@fortawesome/fontawesome-free/js/all';
 require('../preview _user')
+require('../top.js')
+
+
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
