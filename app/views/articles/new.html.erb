@@ -1,0 +1,74 @@
+<div class="topver"></div>
+
+<div class="main">
+  <div class="main-contents login">
+    <div class="form-wrapper new">
+
+      <div class="form-top">
+       投稿を作成
+      </div>
+      <%# 部分テンプレートでフォームを表示する %>
+      <%= form_with model: @article, id: 'new_post',local: true do |f| %>
+        <%= render 'shared/error_messages', model: f.object %> 
+
+        <div class="post-field">
+          <div class="field-flex">
+            <%= f.label :text, "状態"%>
+            <span class="indispensable">必須</span>
+            <%= f.label(:pubulic, for: nil, class: 'article-status-label') do %>
+              <%= f.radio_button :status, :public %>
+              <%= '公開' %>
+            <% end %>
+            <%= f.label(:private, for: nil, class: 'article-status-label') do %>
+              <%= f.radio_button :status, :private %>
+              <%= '非公開' %>
+            <% end %>
+            
+          </div>
+       </div>
+
+       <div class="post-field">
+         <div class="field-flex">
+           <%= f.label :text, "カテゴリー"%>
+           <span class="indispensable">必須</span>
+         </div>
+         <%= f.collection_select(:category_id,Category.all, :id, :name, {}, {class:"select-box", id:"article-category"}) %>
+       </div>
+
+       <div class="post-field">
+         <div class="field-flex">
+           <%= f.label :text, "タイトル"%>
+           <span class="indispensable">必須</span>
+         </div>
+         <%= f.text_field :article_name, class: :form__title, id:"article_text",
+           placeholder: "" %>
+       </div>
+
+       <div class="field">
+         <div class="field-flex">
+           <%= f.label :image, "画像" %>
+           <span class="indispensable">必須</span>
+         </div>
+         <div id="previews"></div>
+         <%= f.file_field :image, id: "article-image"%>
+       </div>
+
+       <div class="post-field">
+         <div class="field-flex">
+           <%= f.label :text, "内容"%>
+           <span class="indispensable">必須</span>
+         </div>
+         <%= f.text_area :text, class: :form__text, id:"item_text",
+           placeholder: "" %>
+       </div>
+
+       <div class="field">
+         <%= f.submit "投稿する" , class: :form__btn %>
+       </div>
+
+      <% end %>
+      
+
+    </div>
+  </div>
+</div>

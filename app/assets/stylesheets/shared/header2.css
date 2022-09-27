@@ -134,6 +134,10 @@
   text-decoration: none;
 }
 
+.header-user-name:hover {
+  color: #087b0a;
+ }
+
 .nav-mobile { 
   display: none;
 }
@@ -168,6 +172,7 @@
  margin-right: 15px;
  border-radius: 5px;
  cursor: pointer;
+ text-decoration: none;
 }
 
 .sign-up-btn:hover,

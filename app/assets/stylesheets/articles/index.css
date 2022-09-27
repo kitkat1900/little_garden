@@ -7,3 +7,74 @@
   align-items : center ;
 }
 
+a {
+  text-decoration: none;
+}
+
+.article-main {
+  background: #f8f8f8;
+}
+
+/* 商品一覧 */
+
+.article-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+  margin: 20px;
+}
+
+.article-contents>.title {
+  font-size: 6vh;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.article-contents>.subtitle {
+  font-size: 4vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: #3ccace;
+  font-weight: bold;
+}
+
+.article-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+.article-lists>.list {
+  width: 50vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+
+.article-img-content {
+  position: relative;
+}
+
+.article-img {
+  width: 44vh;
+  height: 33vh;
+}
+
+.article-info {
+  background-color: #FFF;
+  color: #818181;
+  padding: 1vw;
+}
+
+.article-info:hover {
+  color: black;
+}
+
+.article-name {
+  font-size: 4vh;
+}
+
+/* //商品一覧 */

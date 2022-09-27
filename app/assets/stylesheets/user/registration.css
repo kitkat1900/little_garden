@@ -1,7 +1,9 @@
 /* 新規登録・ログイン・ユーザー情報編集
 ---------------------------------------------- */
+
+
 .form-wrap{
-  width: 70%;
+  width: 80%;
   height: 90%;
   margin: auto;
   margin-top: 20px;
@@ -13,6 +15,7 @@
   text-align: center;
   margin: 0 auto;
   margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 30px;
   color: #565656;
   border-bottom: 5px solid #087b0a ;
@@ -35,7 +38,7 @@ form{
 }
 
 .form-group{
-  width: 100%;
+  width: 90%;
   margin-bottom: 30px;
 }
 
@@ -151,3 +154,20 @@ a[href$="sign_in"] {
 a:hover[href$="sign_in"] {
   color: black;
 }
+
+
+/* 編集機能でのみ使用 */
+.login-attention{
+  width: 100%;
+  margin: 50px auto;
+  font-size: 17px;
+  color: #565656;
+}
+
+.info-text {
+  color: #888;
+  font-size: 15px;
+  margin-top: 3px;
+}
+
+

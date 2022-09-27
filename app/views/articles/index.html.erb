@@ -1,5 +1,34 @@
 <%= render "shared/header2" %>
 <%#= render "shared/header3" %>
 <div class="topver"></div>
+  <div class='article-main'>
+    <div class='article-contents'>
+      <h2 class='title'>新着投稿</h2>
+      <div class="subtitle" >
+        新規投稿商品
+      </div>
+      <ul class='article-lists'>
+        <% @articles.each do |article| %>
+        <li class='list'>
+        <%= link_to article_path(article.id), method: :get do %>
+          <div class='article-img-content'>
+            <%= image_tag article.image, class: "article-img" if article.image.attached? %>
+          </div>
+          <div class='article-info'>
+            <h3 class='article-name'>
+              <%= article.article_name %>
+            </h3>
+          </div>
+        <% end %>
+        <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<%= link_to(new_article_path, class: 'post-btn') do %>
+  <span class='post-btn-text'>投稿</span>
+  <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "post-btn-icon" %>
+<% end %>
 
 <%= render "shared/second-footer"%>

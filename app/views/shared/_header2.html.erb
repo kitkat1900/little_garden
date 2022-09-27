@@ -30,9 +30,9 @@
           <% if user_signed_in? %>
             <li><%= link_to  current_user.username, "/users/#{current_user.id}", class: "header-user-name" %></li>
               <% if current_user.image.present?%>
-                <li><%= link_to (image_tag current_user.image  , class: "header-user-img"), "#" %></li>
+                <li><%= link_to (image_tag current_user.image, class: "header-user-img"), "#" %></li>
               <% else %>
-                <li><%= link_to (image_tag "default.png" , class: "header-user-img"), "#" %></li>
+                <li><%= link_to (image_tag "default.png", class: "header-user-img"), "#" %></li>
               <% end %>
             <li><%= link_to"ログアウト", destroy_user_session_path, method: :delete, class: "log-out-btn" %></li>
             <%# PC表示 %>

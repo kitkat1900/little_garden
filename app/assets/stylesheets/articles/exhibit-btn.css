@@ -1,0 +1,28 @@
+.post-btn {
+  width: 100px;
+  background: #087b0a;
+  text-align: center;
+  border-radius: 10%;
+  bottom: 80px;
+  right: 20px;
+  position: fixed;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.post-btn:hover {
+  margin: 5px 0 0 0;
+}
+
+.post-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+
+  margin-bottom: 5px;
+}
+
+.post-btn-icon {
+  width: 80%;
+}
+

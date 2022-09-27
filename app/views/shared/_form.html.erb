@@ -1,0 +1,49 @@
+<%= form_with model: @article, id: 'new_post',local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %> 
+
+  <div class="post-field">
+    <div class="field-flex">
+      <%= f.label(:pubulic, for: nil, class: 'article-status-label') do %>
+        <%= f.radio_button :status, :public %>
+        <%= I18n.t('activerecord.attributes.article.statuses.public') %>
+      <% end %>
+      <%= f.label(:private, for: nil, class: 'article-status-label') do %>
+        <%= f.radio_button :status, :private %>
+        <%= I18n.t('activerecord.attributes.article.statuses.private') %>
+      <% end %>
+      <span class="indispensable">必須</span>
+    </div>
+  </div>
+
+  <div class="post-field">
+    <div class="field-flex">
+      <%= f.label :text, "カテゴリー"%>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.collection_select(:category_id,Category.all, :id, :name, {}, {class:"select-box", id:"article-category"}) %>
+  </div>
+
+  <div class="field">
+    <div class="field-flex">
+      <%= f.label :image, "画像" %>
+      <span class="indispensable">必須</span>
+    </div>
+    <div id="previews"></div>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="post-field">
+    <div class="field-flex">
+      <%= f.label :text, "内容"%>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :text, class: :form__text, id:"item_text",
+                           placeholder: "作っている時のつぶやきや表情はどんな風に見えましたか？
+１年後、５年後・・お子さんが大きくなった時にも残しておきたい成長の記録をぜひ残してください！" %>
+  </div>
+
+  <div class="field">
+    <%= f.submit "投稿する" , class: :form__btn %>
+  </div>
+
+<% end %>
