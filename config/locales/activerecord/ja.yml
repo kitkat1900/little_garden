@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    articles:
+      models:
+        article: 記事
+      attributes:
+        article:
+          status: 状態

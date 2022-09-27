@@ -1,0 +1,42 @@
+
+/* 作品投稿機能（items/new）
+---------------------------------------------- */
+
+.new{
+  width: 100%;
+}
+ 
+.post__field{
+  margin-bottom: 40px;
+}
+ 
+.article-image{
+  display: block;
+  max-width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+ 
+.post__field label{
+  color: #818181;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+ 
+.form__title{
+  width: 500px;
+  font-size: 17px;
+}
+
+.form__text{
+  height: 200px;
+  font-size: 17px;
+}
+ 
+.form__text::placeholder,
+.form__tag::placeholder{
+  color: #aaaaaa;
+  font-size: 14px;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+}
+ 

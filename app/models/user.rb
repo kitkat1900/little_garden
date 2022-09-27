@@ -10,8 +10,8 @@ class User < ApplicationRecord
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字の両方を含めて設定してください' 
-  validates :username, presence: true, length: { maximum: 20 }
-  validates :profile, length: { maximum: 1000 }
+  validates :username, presence: true, length: { maximum: 10 }
+  validates :profile, length: { maximum: 400 }
 
 
 
