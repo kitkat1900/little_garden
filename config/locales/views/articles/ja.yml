@@ -1,6 +1,7 @@
 ja:
   articles:
     new:
+      article_name: 'タイトル'
       status: '状態'
       public: '公開'
       private: '非公開'

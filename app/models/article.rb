@@ -6,9 +6,9 @@ class Article < ApplicationRecord
 
   enum status: { public: 0, private: 1 }, _prefix: true
 
-  validates :text, :text, presence: true
+  validates :article_name, length: { maximum: 20 }, presence: true
+  validates :text, length: { maximum: 400 }, presence: true
   validates :category_id, numericality: { other_than: 1 } 
   validates :status, inclusion: { in: Article.statuses.keys }
-
-  validates :category_id, numericality: { other_than: 1 , message: "can't be blank"}
+  validates :image, presence: true
 end

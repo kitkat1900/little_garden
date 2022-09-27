@@ -13,7 +13,7 @@
 
         <div class="post-field">
           <div class="field-flex">
-            <%= f.label :text, "状態"%>
+            状態
             <span class="indispensable">必須</span>
             <%= f.label(:pubulic, for: nil, class: 'article-status-label') do %>
               <%= f.radio_button :status, :public %>
@@ -29,7 +29,7 @@
 
        <div class="post-field">
          <div class="field-flex">
-           <%= f.label :text, "カテゴリー"%>
+           カテゴリー
            <span class="indispensable">必須</span>
          </div>
          <%= f.collection_select(:category_id,Category.all, :id, :name, {}, {class:"select-box", id:"article-category"}) %>
@@ -37,16 +37,16 @@
 
        <div class="post-field">
          <div class="field-flex">
-           <%= f.label :text, "タイトル"%>
+           タイトル
            <span class="indispensable">必須</span>
          </div>
          <%= f.text_field :article_name, class: :form__title, id:"article_text",
-           placeholder: "" %>
+           placeholder: "20文字以内" %>
        </div>
 
        <div class="field">
          <div class="field-flex">
-           <%= f.label :image, "画像" %>
+           投稿画像
            <span class="indispensable">必須</span>
          </div>
          <div id="previews"></div>
@@ -55,11 +55,11 @@
 
        <div class="post-field">
          <div class="field-flex">
-           <%= f.label :text, "内容"%>
+           内容
            <span class="indispensable">必須</span>
          </div>
          <%= f.text_area :text, class: :form__text, id:"item_text",
-           placeholder: "" %>
+           placeholder: "400字以内" %>
        </div>
 
        <div class="field">

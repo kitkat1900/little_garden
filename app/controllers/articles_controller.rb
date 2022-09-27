@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
+
   def index
     @articles = Article.status_public.order(created_at: :desc)
   end
@@ -8,7 +10,6 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    binding.pry
     @article = Article.new(article_params)
   
     if @article.save
