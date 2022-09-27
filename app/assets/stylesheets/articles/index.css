@@ -27,16 +27,8 @@ a {
 }
 
 .article-contents>.title {
-  font-size: 6vh;
+  font-size: 5vh;
   line-height: 1.4;
-  font-weight: bold;
-}
-
-.article-contents>.subtitle {
-  font-size: 4vh;
-  margin: 1vh 0;
-  text-decoration: none;
-  color: #3ccace;
   font-weight: bold;
 }
 

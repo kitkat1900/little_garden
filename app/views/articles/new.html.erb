@@ -1,3 +1,4 @@
+<%= render "shared/second-header" %>
 <div class="topver"></div>
 
 <div class="main">
@@ -17,11 +18,11 @@
             <span class="indispensable">必須</span>
             <%= f.label(:pubulic, for: nil, class: 'article-status-label') do %>
               <%= f.radio_button :status, :public %>
-              <%= '公開' %>
+              <%= t ".public" %>
             <% end %>
             <%= f.label(:private, for: nil, class: 'article-status-label') do %>
               <%= f.radio_button :status, :private %>
-              <%= '非公開' %>
+              <%= t ".private"  %>
             <% end %>
             
           </div>
@@ -72,3 +73,5 @@
     </div>
   </div>
 </div>
+
+<%= render "shared/second-footer"%>
