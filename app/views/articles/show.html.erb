@@ -9,7 +9,7 @@
 </div>
 
 <div class="article-title">
-  <h2 class="article-name">
+  <h2 class="article-show-name">
     <%= @article.article_name %>
   </h2>
   <div class="article-navi">
@@ -30,7 +30,7 @@
       <tbody>
         <tr>
           <th class="detail-item">投稿者</th>
-          <td class="detail-value"><%= link_to  @article.user.username, "/users/#{current_user.id}" %></td>
+          <td class="detail-value"><%= link_to  @article.user.username, "/users/#{@article.user.id}" %></td>
         </tr>
         <tr>
           <th class="detail-item">カテゴリー</th>
