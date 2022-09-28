@@ -10,6 +10,8 @@
   margin-bottom: 40px;
 }
  
+.article-user-previews,
+.article.img,
 .article-image{
   display: block;
   max-width: 100%;
