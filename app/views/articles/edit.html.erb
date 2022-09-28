@@ -50,13 +50,15 @@
            投稿画像
            <span class="indispensable">必須</span>
          </div>
-         <% if current_user.image.present? %> 
-           <%= image_tag @article.image , id: 'article-img' %>
-           <%= f.file_field :image, id: "article-image"%>
-         <% else %>
+         <%# if current_user.image.present? %> 
+           <%#div id="article-user-previews">
+             <%#= image_tag @article.image , id: 'article-img' %>
+             <%#= f.file_field :image, id: "article-image"%>
+           <%#/div>
+         <%# else %>
           <div id="previews"></div>
           <%= f.file_field :image, id: "article-image"%>
-         <% end %>
+         <%# end %>
        </div>
 
        <div class="post-field">
