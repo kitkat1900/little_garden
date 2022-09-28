@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :redirect, only: [:edit, :destroy]
 
   def index
     @articles = Article.status_public.order(created_at: :desc)
@@ -26,6 +27,18 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def edit
+ 
+  end
+
+  def update
+    if @article.update(article_params)
+      redirect_to article_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def article_params
@@ -34,5 +47,11 @@ class ArticlesController < ApplicationController
 
   def set_article
     @article = Article.find(params[:id])
+  end
+
+  def redirect
+    unless current_user == @article.user
+      redirect_to root_path
+    end
   end
 end
