@@ -1,10 +1,12 @@
 /* 新規登録・ログイン・ユーザー情報編集
 ---------------------------------------------- */
-
+form{
+  margin: auto;
+  width: 50%;
+}
 
 .form-wrap{
   width: 80%;
-  height: 90%;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 30px;
@@ -21,14 +23,9 @@
   border-bottom: 5px solid #087b0a ;
 }
 
-form{
-  width: 50%;
-  margin: 50px auto ;
-}
-
 .indispensable{
   height: 20px;
-  padding: 3px;
+  padding: 2px;
   text-align: center;
   background-color: red;
   color: #fff;
@@ -95,25 +92,26 @@ input{
   width: 100%;
   text-align: center;
   border: none;
-  background-color: #087b0a;
+  background-color: #818181;
   color: #FFF;
   border-radius: 5px;
   cursor: pointer;
 }
 
+.register-green-btn:hover {
+  background-color: #087b0a;
+}
+
 /* 編集機能でのみ使用 */
 .account-delete{
-  width: 50%;
-  height: 10%;
-  margin: 70px 320px 20px;
+  margin: 30px 30px 15px 30px;
 }
 
 .delete-attention{
-  width: 70%;
+  text-align: center;
   display: flex;
-  margin: 70px 96px 10px;
+  margin:0 auto;
   font-size: 17px;
-
 }
 
 .button_to{
@@ -136,7 +134,7 @@ input{
 }
 
 .delete-green-btn:hover{
-  background-color: #087b0a;
+  background-color: red;
   color: #FFF;
 }
 
@@ -144,17 +142,6 @@ input{
   height: 25px;
   margin-left: 10px;
 }
-
-a[href$="sign_in"] {
-  color: #818181;
-  font-size: 20px;
-  text-decoration: none;
-}
-
-a:hover[href$="sign_in"] {
-  color: black;
-}
-
 
 /* 編集機能でのみ使用 */
 .login-attention{

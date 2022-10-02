@@ -1,17 +1,13 @@
-<%= render "shared/second-header" %>
-<div class="topver"></div>
+<div class= "app">
+<%= render "shared/header" %>
 
-<div class="main">
-  <div class="main-contents">
+<div class="user-show-main">
+  <%= render "shared/sidebar" %>
+  <div class="user-show-contents">
       <div class="form-top profile">
        <p>プロフィール</p>
       </div>
-
      <div class="profile-main">
-       <div class="form-top profile">
-         <p>プロフィール</p>
-       </div>
-
        <div class="profile-inner">
           <div class="profile-user-image">
                 <% if @user.image.present?%>
@@ -30,46 +26,53 @@
 
                 <%# ログインしているページが本人か確認する %>
                 <% if user_signed_in? && current_user.id == @user.id %>
-                    <div class="profile-user-icons">
-                      <div class="user-icons">
-                        <%#= link_to image_tag( "home2-logo2.png",class: "user-icon" ), "#"%>
-                        <%= link_to root_path do %>
-                         <i class="fa-solid fa-house fa-4x fa-fw" style="color:black;"></i>
-                        <% end %>
-                        <span>home</span>
-                      </div>
-                      <div class="user-icons">
-                        <%#= link_to image_tag( "home2-logo2.png",class: "user-icon" ), "#"%>
-                        
-                      </div>
-                        <%#= link_to image_tag( "icon3.png",class: "user-icon" ),  new_item_path%>
-                      <div class="user-icons">
-                        <%#= link_to image_tag( "favorite2-logo.png",class: "user-icon" ),  "favorites_user_path(@user)"%>
-                        <%= link_to "#" do %>
-                         <i class="fa-solid fa-heart fa-4x fa-fw" style="color:black;"></i>
-                        <% end %>
-                        <span>MYリスト</span>
-                      </div>
-                      <div class="user-icons">
-                        <%#= link_to image_tag( "logout2-logo.png",class: "user-icon" ), destroy_user_session_path, method: :delete %>
-                        <%= link_to destroy_user_session_path, method: :delete do %>
-                         <i class="fa-solid fa-right-from-bracket fa-4x fa-fw" style="color:black;"></i>
-                        <% end %>
-                        <span>ログアウト</span>
-                      </div>
-                      <div class="user-icons">
-                        <%#= link_to image_tag( "edit2-logo.png",class: "user-icon" ), "edit_user_registration_path" %>
-                        <%= link_to edit_user_registration_path do %>
-                         <i class="fa-solid fa-pen-to-square fa-4x fa-fw" style="color:black;"></i>
-                        <% end %>
-                        <span>編集</span>
-                      </div>
-                    </div>
+                    <ul class="profile-user-icons">
+                      <li>
+                        <div class="user-icons" >
+                          <%= link_to "#" do %>
+                            <i class="fa-solid fa-bag-shopping fa-2x icon-b" style="color:black;"></i>
+                          <% end %>
+                        </div>
+                        <div><%= link_to "Myリスト", "#", class: "user-list" %></div>
+                      </li>
+                      <li>
+                        <div class="user-icons" >
+                          <%= link_to "#" do %>
+                            <i class="fa-regular fa-star fa-2x icon-b" style="color:black;"></i>
+                          <% end %>
+                        </div>
+                        <div><%= link_to "お気に入り", "#", class: "user-star" %></div>
+                      </li>
+                      <li>
+                        <div class="user-icons" >
+                          <%= link_to new_article_path do %>
+                            <i class="fa-regular fa-pen-to-square fa-2x icon-b" style="color:black;"></i>
+                          <% end %>
+                        </div>
+                        <div><%= link_to "投稿", "#", class: "user-post" %></div>
+                      </li>
+                      <li>
+                        <div class="user-icons" id="user-edit-btn">
+                          <%= link_to edit_user_registration_path do %>
+                            <i class="fa-solid fa-user-pen fa-2x icon-b" style="color:black;"></i>
+                          <% end %>
+                        </div>
+                        <div><%= link_to "編集", edit_user_registration_path, class: "user-edit" %></div>
+                      </li>
+                     <li>
+                        <div class="user-icons" id="user-edit-btn">
+                          <%= link_to destroy_user_session_path, method: :delete do %>
+                            <i class="fa-solid fa-arrow-right-from-bracket fa-2x icon-b" style="color:black;"></i>
+                          <% end %>
+                        </div>
+                        <div><%= link_to "ログアウト", edit_user_registration_path, class: "user-edit" %></div>
+                      </li>
+                    </ul>
                 <% else %>
                     <div class="profile-user-follows"> 
                       <%# <p>フォロー</p><div class="profile-user-follow">３０</div>
                       <p>フォロワー</p><div class="profile-user-follow">５０００</div> %>
-                      <%= link_to "お気に入りの作品 ▼", favorites_user_path(@user), class: "profile-favorite" %> 
+                      <%#= link_to "お気に入りの作品 ▼", favorites_user_path(@user), class: "profile-favorite" %> 
                     </div> 
                 <% end %>
                 <%# /ログインしているページが本人か確認する %>
@@ -108,4 +111,5 @@
        </div>
 <% end %>
 
-<%= render "shared/second-footer"%>
+
+</div>

@@ -1,0 +1,175 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  float: none;
+  width: 100vw;
+  height: 64px;
+  background-color: #fff;
+  border-bottom: solid 2px #087b0a;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-header {
+  width: 500px;
+  display: flex;
+  margin-right: auto;
+}
+
+.header-app-icon {
+  width: 200px;
+  height: 100%;
+}
+
+.header-app-icon:hover {
+  margin: 1px 0 0 0;
+}
+
+.logo-img {
+  width: 200px;
+  height: 100%;
+}
+
+.header-search-contents {
+  width: 300px;
+  margin: auto;
+}
+
+.header-search-form {
+  width: 300px;
+  display: flex;
+  background-color:#ebeced;
+  border-radius: 50px;
+}
+
+.header-input-box {
+  width: 100%;
+  padding-left: 10px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: #ebeced;
+  color: #818181;
+  border: solid 1px #ebeced;
+  cursor: pointer;
+}
+
+.header-search-button {
+  width: 40px;
+  border: 0;
+  cursor: pointer;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding: 8px;
+  background-color: #ebeced;
+}
+
+.header-search-icon {
+  width: 100%;
+}
+
+.center-header {
+  width: 350px;
+}
+
+.header-menu {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.header-icons {
+  height: 58px;
+  width: 58px;
+  border: 1px solid #aaaaaa;
+  border-radius: 100%;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-icons:hover {
+  background-color: #ebeced;
+  color: #818181;
+}
+
+.right-header {
+  width: 200px;
+  height: 100%;
+  margin-left: auto;
+}
+
+.account-info {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.header-user-image {
+  width: 58px;
+  height: 58px;
+  border: 1px solid #aaaaaa;
+  border-radius: 100%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.header-user-image:hover{
+  background-color: #ebeced;
+}
+
+.signup-image,
+.login-image,
+.logout-image {
+  height: 58px;
+  width: 58px;
+  border: 1px solid #aaaaaa;
+  border-radius: 100%;
+  margin-right: 15px;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-image:hover,
+.login-image:hover,
+.logout-image:hover {
+  background-color: #ebeced;
+}
+
+.icon-a:hover {
+  background-color: #ebeced;
+}
+
+.header-nav,
+.header-nav2,
+.header-nav3,
+.header-nav4 {
+  color: #73735a;
+  margin-top: 2px;
+  text-align: center;
+}
+
+.header-nav5,
+.header-nav6,
+.header-nav7,
+.header-nav8 {
+  margin-top: 2px;
+  color: #73735a;
+}
+
+.header-nav5{
+  top: 58px;
+}
+
+.hidden {
+  display: none;
+  position : fixed ;
+  z-index : 10;
+}

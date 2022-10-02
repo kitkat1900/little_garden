@@ -7,10 +7,14 @@
   width: 100%;
   text-align: center;
   border: none;
-  background-color: #087b0a;
+  background-color: #818181;
   color: #FFF;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.login-green-btn:hover {
+  background-color: #087b0a;
 }
 
 .login-flash-message {

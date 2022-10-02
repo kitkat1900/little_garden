@@ -6,10 +6,12 @@
   </div>
   <div class='search-bar-contents'>
     <form class="search-form" action="#">
-      <input class='input-box' placeholder='キーワードから探す'>
       <button class="search-button">
-        <%= image_tag "search.png", class:"search-icon" %>
+        <div class="search-icon" %>
+        <i class="fa-solid fa-magnifying-glass" style="color:grey;"></i>
+        </div>
       </button>
+      <input class='input-box' placeholder='キーワードで検索'>
     </form>
     <ul class='lists-left'>
       <li><div class="menu-list" id="mypage-btn">MENU</div></li>
@@ -17,7 +19,7 @@
           <ul class="show-lists hidden" id="pull-down">
             <li><%= link_to"サイトについて", "#" ,class: "pull-down-list" %></li>
             <li><%= link_to"マイページ", user_path(current_user) ,class: "pull-down-list" %></li>
-            <li><%= link_to"投稿する", "new_article_path" ,class: "pull-down-list" %></li>
+            <li><%= link_to"投稿する", new_article_path,class: "pull-down-list" %></li>
             <li><%= link_to"設定", edit_user_registration_path, class: "pull-down-list" %></li>
             <li><%= link_to"ログアウト", destroy_user_session_path, method: :delete, class: "pull-down-list" %></li>
           </ul>
@@ -27,7 +29,7 @@
             <li><%= link_to"マイページ", new_user_session_path ,class: "pull-down-list" %></li>
             <li><%= link_to"投稿する", new_user_session_path ,class: "pull-down-list" %></li>
             <li><%= link_to"設定", new_user_session_path, class: "pull-down-list" %></li>
-            <li><%= link_to"ログアウト", new_user_session_path, method: :delete, class: "pull-down-list" %></li>
+            <li><%= link_to"ログアウト", new_user_session_path, class: "pull-down-list" %></li>
           </ul>
         <% end %>
 

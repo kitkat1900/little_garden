@@ -1,0 +1,29 @@
+<div class= "app">
+  <%= render "shared/header2" %>
+
+  <div class="index-main">
+    <%= render "shared/sidebar" %>
+    <div class="main-content">
+      <div class='article-main'>
+        <div class='article-contents'>
+          <h2 class='title'>新着投稿</h2>
+          <ul class='article-lists'>
+            <% @articles.each do |article| %>
+            <li class='list'>
+            <%= link_to article_path(article.id), method: :get do %>
+              <div class='article-img-content'>
+                <%= image_tag article.image, class: "article-img" if article.image.attached? %>
+              </div>
+              <div class='article-info'>
+                <h3 class='article-name'>
+                  <%= article.article_name %>
+                </h3>
+              </div>
+            <% end %>
+            <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+</div>

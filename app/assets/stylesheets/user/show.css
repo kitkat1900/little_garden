@@ -1,17 +1,15 @@
 /* マイページ（users/show）
 ---------------------------------------------- */
-.main{
-  width: 100%;
-  height: 100%;
-  background-color: #087b0a;
+.user-show-main{
+
   display: flex;
-  justify-content : center ;
-  align-items : center ; 
+  flex-direction: row;
+  flex-grow: 1;
+  background-color: #ebeced;
 }
 
-.main-contents{
-  width: 90%;
-  height: 90%;
+.user-show-contents{
+  margin:auto;
   background-color: #FFF;
   border-radius: 15px;
 }
@@ -39,10 +37,7 @@
 
 .profile-main{
   border: 10px solid #087b0a;
-  width: 70%;
- 
   border-radius: 20px;
- 
   margin: auto;
   margin-top: 30px;
   margin-bottom: 150px;
@@ -50,7 +45,6 @@
 
 .profile-inner{
   width: 95%;
-
   display: flex;
   margin: auto;
   margin-top: 30px;
@@ -100,14 +94,14 @@
   justify-content: space-around;
   width: 70%;
   margin: 30px 50px 10px;
-  
+  text-align: center;
 }
 
 .user-icons{
   width: 100px;
   height: 120px;
   margin: 0px 5px;
-  justify-content: center;
+
   text-align: center;
 }
 
@@ -172,4 +166,51 @@
   background-color: #fff; /* 背景色 */
   border: 4px solid #d8d8d8; /*線の太さ・色*/
   border-radius: 5%;
+}
+
+.user-post,
+.user-room,
+.user-login,
+.user-list,
+.user-star,
+.user-edit {
+  height: 50px;
+  color: #818181;
+  font-size: 15px;
+  line-height: 50px;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.use-post:hover,
+.user-room:hover,
+.user-login:hover,
+.user-list:hover,
+.user-star:hover,
+.user-edit:hover{
+  background-color: #ebeced;
+}
+
+.user-icons {
+  width: 58px;
+  height: 58px;
+  margin: 0 15px 0 15px;
+  border: 1px solid #aaaaaa;
+  border-radius: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-icons:hover {
+  background-color: #ebeced;
+}
+
+.icon-b:hover {
+  background-color: #ebeced;
 }

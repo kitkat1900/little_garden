@@ -1,5 +1,7 @@
-<%= render "shared/second-header" %>
-<div class="topver"></div>
+<div class= "app">
+  <%= render "shared/header" %>
+  <div class="index-main">
+    <%= render "shared/sidebar" %>
 
 <%= form_with model: @user, id: 'new_post', url: user_registration_path, class: 'registration-main', local: true do |f| %>
 
@@ -64,5 +66,6 @@
 
   </div>
 <% end %>
+</div>
 
-<%= render "shared/second-footer"%>
+</div>

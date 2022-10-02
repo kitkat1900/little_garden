@@ -1,12 +1,13 @@
-<%= render "shared/second-header" %>
-<div class="topver"></div>
+<div class= "app">
+<%= render "shared/header" %>
 
-<div class="main">
-  <div class="main-contents login">
-    <div class="form-wrapper new">
+<div class="index-main">
+  <%= render "shared/sidebar" %>
+  <div class="article-new-main">
+    <div class="article-new-form-wrapper">
 
       <div class="form-top">
-       投稿を作成
+       新しい投稿
       </div>
       <%# 部分テンプレートでフォームを表示する %>
       <%= form_with model: @article, id: 'new_post',local: true do |f| %>
@@ -28,6 +29,15 @@
           </div>
        </div>
 
+       <div class="field">
+         <div class="field-flex">
+           投稿画像
+           <span class="indispensable">必須</span>
+         </div>
+         <div id="previews"></div>
+         <%= f.file_field :image, id: "article-image"%>
+       </div>
+
        <div class="post-field">
          <div class="field-flex">
            カテゴリー
@@ -44,16 +54,7 @@
          <%= f.text_field :article_name, class: :form__title, id:"article_text",
            placeholder: "20文字以内" %>
        </div>
-
-       <div class="field">
-         <div class="field-flex">
-           投稿画像
-           <span class="indispensable">必須</span>
-         </div>
-         <div id="previews"></div>
-         <%= f.file_field :image, id: "article-image"%>
-       </div>
-
+       
        <div class="post-field">
          <div class="field-flex">
            内容
@@ -73,5 +74,5 @@
     </div>
   </div>
 </div>
+</div>
 
-<%= render "shared/second-footer"%>

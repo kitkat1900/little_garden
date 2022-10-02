@@ -1,18 +1,23 @@
 .post-btn {
-  width: 100px;
-  background: #087b0a;
+  width: 70px;
+  height: 70px;
+  background: #8aec8c;
   text-align: center;
-  border-radius: 10%;
-  bottom: 80px;
+  border-radius: 100%;
+  bottom: 130px;
   right: 20px;
   position: fixed;
   padding: 10px;
   text-decoration: none;
+  padding-top: 20px;
+  border: solid 1px #087b0a;
 }
 
 .post-btn:hover {
-  margin: 5px 0 0 0;
+  background-color: #087b0a;
 }
+
+
 
 .post-btn-text {
   color: #fff;
@@ -24,5 +29,6 @@
 
 .post-btn-icon {
   width: 80%;
+  margin-top: 20px;
 }
 

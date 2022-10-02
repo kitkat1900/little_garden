@@ -1,10 +1,14 @@
 .second-fotter {
+
+  bottom: 0;
+  margin-bottom: 0%;
   width: 100%;
   min-width: 800px;
   height: 120px;
-  background-color: #087b0a;
+  background-color: #FFF;
   display: flex;
   flex-direction: column;
+  border-top: solid 2px #087b0a;
 }
 
 .second-fotter-text-wrap {
@@ -14,7 +18,7 @@
 }
 
 .second-fotter-text {
-  color: #FFF;
+  color: #087b0a;
   font-size: 12px;
   margin: 0 50px;
 }
