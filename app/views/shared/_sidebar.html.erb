@@ -3,29 +3,32 @@
     <ul class='sidebar-menu'>
           <% if user_signed_in? %>
             <% if current_user.image.present?%>
-              <li><%= link_to (image_tag current_user.image, class: "sidebar-user-image"), user_path(current_user) %></li>
+              <li><%= link_to (image_tag current_user.image, class: "sidebar-user-image"), user_path(current_user) %>
+                <div><%= link_to  current_user.username, "/users/#{current_user.id}", class: "sidebar-user-name" %></div>
+              </li>
             <% else %>
-              <li><%= link_to (image_tag "default.png", class: "sidebar-user-image"), user_path(current_user) %></li>
+              <li><%= link_to (image_tag "default.png", class: "sidebar-user-image"), user_path(current_user) %>
+                <div><%= link_to  current_user.username, "/users/#{current_user.id}", class: "sidebar-user-name" %></div>
+              </li>
             <% end %>
-            <li><%= link_to  current_user.username, "/users/#{current_user.id}", class: "sidebar-user-name" %></li>
             <li>
               <div class="user-room-image" id="user-room-btn">
                 <%= link_to user_path(current_user) do %>
                   <i class="fa-solid fa-door-open fa-2x icon-b" style="color:black;"></i>
                 <% end %>
               </div>
-              <li><%= link_to "My Room", user_path(current_user), class: "sidebar-user-room" %></li>
+              <div><%= link_to "My Room", user_path(current_user), class: "sidebar-user-room" %></div>
             </li>
           <% else %>
             <li><%= link_to (image_tag "default.png", class: "sidebar-user-image"), new_user_session_path %></li>
-            <li><%= link_to "ゲスト", new_user_session_path, class: "sidebar-user-name" %></li>
+              <div><%= link_to "ゲスト", new_user_session_path, class: "sidebar-user-name" %></div>
             <li>
               <div class="user-room-image" id="user-room-btn">
                 <%= link_to new_user_session_path do %>
                   <i class="fa-solid fa-door-open fa-2x icon-b" style="color:black;"></i>
                 <% end %>
               </div>
-              <li><%= link_to "My Room", new_user_session_path, class: "sidebar-user-room" %></li>
+              <div><%= link_to "My Room", new_user_session_path, class: "sidebar-user-room" %></div>
             </li>
           <% end %>
 
@@ -35,7 +38,7 @@
                   <i class="fa-solid fa-bag-shopping fa-2x icon-b" style="color:black;"></i>
                 <% end %>
               </div>
-              <li><%= link_to "Myリスト", "#", class: "sidebar-user-list" %></li>
+              <div><%= link_to "Myリスト", "#", class: "sidebar-user-list" %></div>
             </li>
             <li>
               <div class="user-star-image" id="user-star-btn">
@@ -43,7 +46,7 @@
                   <i class="fa-regular fa-star fa-2x icon-b" style="color:black;"></i>
                 <% end %>
               </div>
-              <li><%= link_to "お気に入り", "#", class: "sidebar-user-star" %></li>
+              <div><%= link_to "お気に入り", "#", class: "sidebar-user-star" %></div>
             </li>
             <li>
               <div class="user-edit-image" id="user-edit-btn">
@@ -51,7 +54,7 @@
                   <i class="fa-solid fa-user-pen fa-2x icon-b" style="color:black;"></i>
                 <% end %>
               </div>
-              <li><%= link_to "ユーザー編集", edit_user_registration_path, class: "sidebar-user-edit" %></li>
+              <div><%= link_to "ユーザー編集", edit_user_registration_path, class: "sidebar-user-edit" %></div>
             </li>
     </ul>
   </div>

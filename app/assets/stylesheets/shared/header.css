@@ -151,6 +151,7 @@
 .header-nav2,
 .header-nav3,
 .header-nav4 {
+  top: 59px;
   color: #73735a;
   margin-top: 2px;
   text-align: center;
@@ -160,6 +161,7 @@
 .header-nav6,
 .header-nav7,
 .header-nav8 {
+  top: 59px;
   margin-top: 2px;
   color: #73735a;
 }

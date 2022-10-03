@@ -96,15 +96,15 @@ function pullDown() {
   });
  } else {
   signupBtn.addEventListener('mouseenter', function() {
-    if (pullDown.getAttribute("style") == "display:block;") {
-        pullDown.removeAttribute("style", "display:block;");
+    if (pullDown7.getAttribute("style") == "display:block;") {
+        pullDown7.removeAttribute("style", "display:block;");
      } else {
-         pullDown.setAttribute("style", "display:block;");
+         pullDown7.setAttribute("style", "display:block;");
     }
   });
   signupBtn.addEventListener('mouseleave', function() {
-     if (pullDown) {
-       pullDown.removeAttribute("style", "display:block;");
+     if (pullDown7) {
+       pullDown7.removeAttribute("style", "display:block;");
     }
   });
 

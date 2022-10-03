@@ -6,13 +6,16 @@
   z-index: 999;
   float: none;
   background-color: #d3d3d3;
-  box-sizing: border-box;
   height: calc(100vh - 64px);
 }
 
+.sidebar-main {
+  height: 100%;
+}
+
 .sidebar-menu {
- text-align: center;
- 
+  height: 100%;
+  text-align: center;
 }
 
 .sidebar-user-image {
@@ -20,7 +23,7 @@
   height: 58px;
   border: 1px solid #aaaaaa;
   border-radius: 100%;
-  margin-top: 5px;
+  margin-top: 10px;
   object-fit: cover;
   box-sizing: border-box;
 }
