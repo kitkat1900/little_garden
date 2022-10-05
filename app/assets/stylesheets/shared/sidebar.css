@@ -18,18 +18,66 @@
   text-align: center;
 }
 
-.sidebar-user-image {
-  width: 58px;
-  height: 58px;
-  border: 1px solid #aaaaaa;
-  border-radius: 100%;
-  margin-top: 10px;
-  object-fit: cover;
-  box-sizing: border-box;
+.sidebar-user-name-box,
+.sidebar-user-room-box,
+.sidebar-user-list-box,
+.sidebar-user-star-box,
+.sidebar-user-edit-box {
+  height: 110px;
+  padding-top: 5px;
+  border-radius: 5%;
 }
 
-.sidebar-user-image:hover{
+.sidebar-user-name-box:hover,
+.sidebar-user-room-box:hover,
+.sidebar-user-list-box:hover,
+.sidebar-user-star-box:hover,
+.sidebar-user-edit-box:hover {
   background-color: #ebeced;
+}
+
+#user-name-image {
+  width: 58px;
+  height: 58px;
+  margin: 0 30px 0 30px;
+  border: 1px solid #aaaaaa;
+  border-radius: 100%;
+  object-fit: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.user-room-image,
+.user-login-image,
+.user-list-image,
+.user-star-image,
+.user-edit-image {
+  height: 58px;
+  margin: 0 30px 0 30px;
+  border: 1px solid #aaaaaa;
+  border-radius: 100%;
+  text-align: center;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#user-name-image:hover,
+.user-room-image:hover,
+.user-login-image:hover,
+.user-list-image:hover,
+.user-star-image:hover,
+.user-edit-image:hover {
+  background-color: #FFF;
+}
+
+.icon-b:hover {
+  background-color: #ebeced;
+  border-radius: 5%;
 }
 
 .sidebar-user-room,
@@ -38,10 +86,10 @@
 .sidebar-user-star,
 .sidebar-user-edit,
 .sidebar-user-name {
-  height: 50px;
+  height: 30px;
   color: #818181;
   font-size: 15px;
-  line-height: 50px;
+  line-height: 30px;
   padding: 5px;
   border-radius: 5px;
   text-decoration: none;
@@ -57,31 +105,3 @@
   background-color: #ebeced;
 }
 
-.user-room-image,
-.user-login-image,
-.user-list-image,
-.user-star-image,
-.user-edit-image {
-  height: 58px;
-  margin: 0 30px 0 30px;
-  border: 1px solid #aaaaaa;
-  border-radius: 100%;
-  text-align: center;
-  box-sizing: border-box;
-  background-color: #FFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.user-room-image:hover,
-.user-login-image:hover,
-.user-list-image:hover,
-.user-star-image:hover,
-.user-edit-image:hover {
-  background-color: #ebeced;
-}
-
-.icon-b:hover {
-  background-color: #ebeced;
-}

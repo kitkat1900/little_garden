@@ -52,6 +52,7 @@
   color: #818181;
   border: solid 1px #ebeced;
   cursor: pointer;
+  outline: none;
 }
 
 .header-search-button {

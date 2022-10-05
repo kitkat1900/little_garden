@@ -3,59 +3,98 @@
     <ul class='sidebar-menu'>
           <% if user_signed_in? %>
             <% if current_user.image.present?%>
-              <li><%= link_to (image_tag current_user.image, class: "sidebar-user-image"), user_path(current_user) %>
-                <div><%= link_to  current_user.username, "/users/#{current_user.id}", class: "sidebar-user-name" %></div>
+              <li class="sidebar-user-name-box">
+                <%= link_to user_path(current_user) do %>
+                  <div class="user-name-image" id="user-name-btn">
+                    <%= image_tag current_user.image, id: "user-name-image" %>
+                  </div> 
+                  <span class="sidebar-user-name"><%= current_user.username %></span>
+                 <% end %>
               </li>
             <% else %>
-              <li><%= link_to (image_tag "default.png", class: "sidebar-user-image"), user_path(current_user) %>
-                <div><%= link_to  current_user.username, "/users/#{current_user.id}", class: "sidebar-user-name" %></div>
+              <li class="sidebar-user-name-box">
+                <%= link_to user_path(current_user) do %>
+                  <div class="user-name-image" id="user-name-btn">
+                    <%= image_tag "default.png", id: "user-name-image" %>
+                  </div> 
+                  <span class="sidebar-user-name"><%= current_user.username %></span>
+                 <% end %>
               </li>
             <% end %>
-            <li>
-              <div class="user-room-image" id="user-room-btn">
-                <%= link_to user_path(current_user) do %>
-                  <i class="fa-solid fa-door-open fa-2x icon-b" style="color:black;"></i>
-                <% end %>
-              </div>
-              <div><%= link_to "My Room", user_path(current_user), class: "sidebar-user-room" %></div>
+            <li class="sidebar-user-room-box" >
+              <%= link_to user_path(current_user) do %>
+                <div class="user-room-image" id="user-room-btn">
+                  <i class="fa-solid fa-door-open fa-2x" style="color:black;"></i>
+                </div>
+                <span class="sidebar-user-list">My Room</span>
+              <% end %>
+            </li>
+            <li class="sidebar-user-list-box" >
+              <%= link_to "#" do %>
+                <div class="user-list-image" id="user-list-btn">
+                  <i class="fa-solid fa-bag-shopping fa-2x" style="color:black;"></i>
+                </div>
+                <span class="sidebar-user-list">Myリスト</span>
+              <% end %>
+            </li>
+            <li class="sidebar-user-star-box" >
+              <%= link_to "#" do %>
+                <div class="user-star-image" id="user-star-btn">
+                  <i class="fa-regular fa-star fa-2x" style="color:black;"></i>
+                </div>
+                <span class="sidebar-user-star">お気に入り</span>
+              <% end %>
+            </li>
+            <li class="sidebar-user-edit-box" >
+              <%= link_to edit_user_registration_path do %>
+                <div class="user-edit-image" id="user-edit-btn">
+                  <i class="fa-solid fa-user-pen fa-2x" style="color:black;"></i>
+                </div>
+                <span class="sidebar-user-edit">ユーザー編集</span>
+              <% end %>
             </li>
           <% else %>
-            <li><%= link_to (image_tag "default.png", class: "sidebar-user-image"), new_user_session_path %></li>
-              <div><%= link_to "ゲスト", new_user_session_path, class: "sidebar-user-name" %></div>
-            <li>
-              <div class="user-room-image" id="user-room-btn">
-                <%= link_to new_user_session_path do %>
-                  <i class="fa-solid fa-door-open fa-2x icon-b" style="color:black;"></i>
-                <% end %>
-              </div>
-              <div><%= link_to "My Room", new_user_session_path, class: "sidebar-user-room" %></div>
+            <li class="sidebar-user-name-box">
+              <%= link_to new_user_session_path do %>
+                <div class="user-name-image" id="user-room-btn">
+                  <%= image_tag "default.png", id: "user-name-image" %>
+                </div> 
+                <span class="sidebar-user-name">ゲスト</span>
+              <% end %>
+            </li>
+            <li class="sidebar-user-room-box" >
+              <%= link_to new_user_session_path do %>
+                <div class="user-room-image" id="user-room-btn">
+                  <i class="fa-solid fa-door-open fa-2x" style="color:black;"></i>
+                </div>
+                <span class="sidebar-user-list">My Room</span>
+              <% end %>
+            </li>
+            <li class="sidebar-user-list-box" >
+              <%= link_to new_user_session_path do %>
+                <div class="user-list-image" id="user-list-btn">
+                  <i class="fa-solid fa-bag-shopping fa-2x" style="color:black;"></i>
+                </div>
+                <span class="sidebar-user-list">Myリスト</span>
+              <% end %>
+            </li>
+            <li class="sidebar-user-star-box" >
+              <%= link_to new_user_session_path do %>
+                <div class="user-star-image" id="user-star-btn">
+                  <i class="fa-regular fa-star fa-2x" style="color:black;"></i>
+                </div>
+                <span class="sidebar-user-star">お気に入り</span>
+              <% end %>
+            </li>
+            <li class="sidebar-user-edit-box" >
+              <%= link_to new_user_session_path do %>
+                <div class="user-edit-image" id="user-edit-btn">
+                  <i class="fa-solid fa-user-pen fa-2x" style="color:black;"></i>
+                </div>
+                <span class="sidebar-user-edit">ユーザー編集</span>
+              <% end %>
             </li>
           <% end %>
-
-            <li>
-              <div class="user-list-image" id="user-list-btn">
-                <%= link_to "#" do %>
-                  <i class="fa-solid fa-bag-shopping fa-2x icon-b" style="color:black;"></i>
-                <% end %>
-              </div>
-              <div><%= link_to "Myリスト", "#", class: "sidebar-user-list" %></div>
-            </li>
-            <li>
-              <div class="user-star-image" id="user-star-btn">
-                <%= link_to "#" do %>
-                  <i class="fa-regular fa-star fa-2x icon-b" style="color:black;"></i>
-                <% end %>
-              </div>
-              <div><%= link_to "お気に入り", "#", class: "sidebar-user-star" %></div>
-            </li>
-            <li>
-              <div class="user-edit-image" id="user-edit-btn">
-                <%= link_to edit_user_registration_path do %>
-                  <i class="fa-solid fa-user-pen fa-2x icon-b" style="color:black;"></i>
-                <% end %>
-              </div>
-              <div><%= link_to "ユーザー編集", edit_user_registration_path, class: "sidebar-user-edit" %></div>
-            </li>
     </ul>
   </div>
 </div>
