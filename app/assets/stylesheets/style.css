@@ -13,4 +13,10 @@
   height:     100px;
 }
 
+* {
+  box-sizing: border-box;
+}
 
+a {
+  text-decoration: none;
+}
