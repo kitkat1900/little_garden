@@ -1,36 +1,45 @@
 <div class= "app">
   <%= render "shared/header" %>
-  <div class="index-main">
+  <div class="main">
     <%= render "shared/sidebar" %>
-
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class='form-wrap'>
-        <div class='form-header'>
-          <h1 class='form-header-text'>
+    <%= form_with model: @user, url: new_user_session_path, class: 'user-form-main', local: true do |f| %>
+      <div class='user-form-wrap'>
+        <div class='user-form-header'>
+          <h1 class='user-form-header-text'>
             ログイン
           </h1>
-       </div>
-       <div class='login-flash-message'>
-         <%= flash[:notice] %>
-         <%= flash[:alert] %>
-       </div>
-       <div class="form-group">
-         <div class='form-text-wrap'>
-           <label class="form-text">メールアドレス</label>
-           <span class="indispensable">必須</span>
+        </div>
+        <div class='login-flash-message'>
+          <%= flash[:notice] %>
+          <%= flash[:alert] %>
+        </div>
+        <div class="user-form-group">
+          <div class='user-form-text-wrap'>
+            <label class="user-form-text">メールアドレス</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+        </div>
+        <div class="user-form-group">
+          <div class='user-form-text-wrap'>
+            <label class="user-form-text">パスワード</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.password_field :password, class:"input-default", id:"password", placeholder:"半角英数の両方含めて6文字以上" %>
+        </div>
+        <div class='login-btn'>
+          <%= f.submit "ログイン" ,class:"login-green-btn" %>
+        </div>
+        <div class="account-delete">
+          <div class='signup-info'>
+            <hr>
+            <label class="form-text">または</label>
+            <hr>
          </div>
-         <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
-       </div>
-       <div class="form-group">
-         <div class='form-text-wrap'>
-           <label class="form-text">パスワード</label>
-           <span class="indispensable">必須</span>
-         </div>
-         <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
-       </div>
-       <div class='login-btn'>
-         <%= f.submit "ログイン" ,class:"login-green-btn" %>
-       </div>
+        </div>
+        <div class="register-btn">
+          <%= button_to "会員登録", new_user_registration_path, class: "register-green-btn" %>
+        </div>
       </div>
     <% end %>
   </div>
