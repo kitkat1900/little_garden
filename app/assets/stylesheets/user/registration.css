@@ -3,7 +3,8 @@
 .user-form-main {
   margin: auto;
   width: 50%;
-  background-color: #FFF;
+  background-color: #fff;border: solid 1px #00a400;
+
   border-radius: 10px;
 }
 
@@ -24,9 +25,9 @@
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 30px;
+  font-size: 25px;
   color: #565656;
-  border-bottom: 2px solid #087b0a ;
+  border-bottom: 2px solid #00a400;
 }
 
 .user-form-group{
@@ -63,16 +64,16 @@
 
 }
 
-#user-img,
 .user-image,
+#user-img,
 .default-image,
-.preview-image,
 #default-image,
+.preview-image,
 #prev-img{
   display: block;
   width: 150px;
   height: 150px;
-  border: 1px solid #aaa;
+  border: 1px solid #00a400;
   border-radius: 100%;
   object-fit: cover;
   margin: 10px auto;
@@ -81,11 +82,11 @@
 .input-default,
 textarea{
   width: 100%;
-  border: 1.5px solid #aaaaaa;
+  border: 1.5px solid #d3d3d3;
   border-radius: 5px;
   display: block;
   margin: auto;
-  outline-color: #087b0a;
+  outline-color: #00a400;
 }
 
 textarea{
@@ -94,12 +95,17 @@ textarea{
 
 input{
   padding: 5px;
-  font-size: 17px;
+  font-size: 15px;
 }
 
-.field label{
+#user-image {
   color: #818181;
-  font-size: 16px;
+  font-size: 15px;
+}
+
+.user-form-group label{
+  color: #818181;
+  font-size: 15px;
 }
 
 .register-btn{
@@ -107,19 +113,18 @@ input{
   margin: 0 auto;
 }
 
-.register-green-btn{
+.register-blue-btn{
   width: 100%;
   text-align: center;
   border: none;
-  color: #818181;
-  background-color: #d3d3d3;
-  border: solid 2px #087b0a ;
+  color: #fff;
+  background-color: #1877f2;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.register-green-btn:hover {
-  background-color: #ebeced;
+.register-blue-btn:hover {
+  color: #d3d3d3;
 }
 
 /* 編集機能でのみ使用 */
@@ -131,38 +136,40 @@ input{
 
 }
 
+.delete-attention label {
+  color: #818181;
+  font-size: 15px;
+}
+
 .delete-btn {
   width: 30%;
   margin: 0 auto;
 }
 
-.delete-green-btn {
+.delete-red-btn {
   width: 100%;
   text-align: center;
   border: none;
-  color: #818181;
+  color: #fff;
   background-color: red;
-  border: solid 2px #087b0a ;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .delete-green-btn:hover {
-  background-color: #ebeced;
+  color: #d3d3d3;
 }
 
 /* 編集機能でのみ使用 */
 .login-attention {
   width: 100%;
   margin: 50px auto;
-  font-size: 17px;
+  font-size: 15px;
   color: #565656;
 }
 
 .info-text {
-  color: #888;
+  color: #818181;
   font-size: 15px;
   margin-top: 3px;
 }
-
-

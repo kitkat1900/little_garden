@@ -6,7 +6,7 @@
   width: 100vw;
   height: 64px;
   background-color: #fff;
-  border-bottom: solid 2px #087b0a;
+  border-bottom: solid 2px #00a400;
   display: flex;
   justify-content: space-between;
 }
@@ -84,7 +84,7 @@
 .header-icons {
   height: 58px;
   width: 58px;
-  border: 1px solid #aaaaaa;
+  border: 1px solid #00a400;
   border-radius: 100%;
   background-color: #FFF;
   display: flex;
@@ -114,7 +114,7 @@
 .header-user-image {
   width: 58px;
   height: 58px;
-  border: 1px solid #aaaaaa;
+  border: 1px solid #00a400;
   border-radius: 100%;
   margin-right: 15px;
   object-fit: cover;
@@ -129,7 +129,7 @@
 .logout-image {
   height: 58px;
   width: 58px;
-  border: 1px solid #aaaaaa;
+  border: 1px solid #00a400;
   border-radius: 100%;
   margin-right: 15px;
   background-color: #FFF;

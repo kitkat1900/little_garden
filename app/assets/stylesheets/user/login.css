@@ -7,15 +7,14 @@
   width: 100%;
   text-align: center;
   border: none;
-  color: #818181;
-  background-color: #d3d3d3;
-  border: solid 2px #087b0a ;
+  color: #fff;
+  background-color: #00a400;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .login-green-btn:hover {
-  background-color: #ebeced;
+  color: #d3d3d3;
 }
 
 .login-flash-message {
@@ -32,4 +31,9 @@ hr {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.signup-info label {
+  color: #818181;
+  font-size: 15px;
 }

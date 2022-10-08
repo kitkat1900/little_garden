@@ -24,14 +24,17 @@ a {
   position: fixed;
   right: 20px;
   bottom: 20px;
+  border: solid 1px #00a400;
+  background-color: #FFF;
+  border-radius: 100%;
 }
 
 .icon-back {
   border-radius: 100%;
-  border: solid 1px #087b0a ;
+  border: solid 1px #00a400;
   background-color: #FFF;
 }
 
 .icon-back:hover {
-background-color: #087b0a;
+  background-color: #00a400;
 }

@@ -49,8 +49,8 @@
           <span class="indispensable">必須</span>
         </div>
         <div class="login__attention">
-          <p class='info-text'>※パスワード以外の変更の場合は現在のパスワードをご入力ください</p>
-          <p class='info-text'>※パスワードを変更する場合は新しいパスワードをご入力ください</p>
+          <p class='info-text'>※パスワード以外の変更は現在のパスワードをご入力ください</p>
+          <p class='info-text'>※パスワードを変更は新しいパスワードをご入力ください</p>
         </div>
         <%= f.password_field :password, class:"input-default", id:"password", placeholder:"半角英数の両方含めて6文字以上", autocomplete: "new-password" %>
       </div>
@@ -66,7 +66,7 @@
         <%= f.text_area :profile, class:"profile-text", id:"user-profile", placeholder:"例）主にトマトやきゅうりなどの野菜を育てています。（400文字まで）" ,maxlength:"400" %>
       </div>
       <div class="register-btn">
-        <%= f.submit "変更する", class: "register-green-btn" %>
+        <%= f.submit "変更する", class: "register-blue-btn" %>
       </div>
       <div class="account-delete">
           <div class='delete-attention'>
@@ -75,7 +75,7 @@
          </div>
       </div>
       <div class="delete-btn">
-         <%= button_to "退会する", registration_path(resource_name), data: { confirm: "本当に退会しますか？" }, method: :delete, class: "delete-green-btn" %>
+         <%= button_to "退会する", registration_path(resource_name), data: { confirm: "本当に退会しますか？" }, method: :delete, class: "delete-red-btn" %>
       </div>
     <% end %>
   </div>
