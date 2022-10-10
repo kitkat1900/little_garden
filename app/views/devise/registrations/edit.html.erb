@@ -2,81 +2,81 @@
   <%= render "shared/header" %>
   <div class="main">
     <%= render "shared/sidebar" %>
-
-    <%= form_with model: @user, id: 'new_post', url: user_registration_path, class: 'user-form-main', local: true do |f| %>
-
-      <div class="user-form-wrap">
-        <div class='user-form-header'>
-          <h1 class='user-form-header-text'>
-            ユーザー情報変更
-         </h1>
-      </div>
-
-      <%= render 'devise/shared/error_messages', model: f.object %> 
-
-      <div class="user-form-group">
-        <%= f.label :image, "プロフィール画像" %>
-        <% if current_user.image.present? %> 
-          <%= image_tag current_user.image , id: 'user-img' %>
-        <% else %>
-          <%= image_tag "default.png", id: "default-image" %>
-        <% end %>
-          <div id="prev-image"></div>
-          <%= f.file_field :image, id: "user-image" %>
-      </div>
-      <div class="user-form-group">
-        <div class='user-form-text-wrap'>
-          <label class="user-form-text">ユーザー名(10文字以内)</label>
-          <span class="indispensable">必須</span>
+    <div class='user-form-main'>
+      <%= form_with model: @user, id: 'new_post', url: user_registration_path, class: 'user-form-edit', local: true do |f| %>
+        <div class="user-form-wrap">
+          <div class='user-form-header'>
+            <h1 class='user-form-header-text'>
+              ユーザー情報変更
+           </h1>
         </div>
-        <%= f.text_field :username, class:"input-default", id:"username", placeholder:"例) トマト太郎", maxlength:"10", autofocus: true %>
-      </div>
-      <div class="user-form-group">
-        <div class='user-form-text-wrap'>
-          <label class="user-form-text">メールアドレス</label>
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可" %>
-      </div>
 
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <%= render 'devise/shared/error_messages', model: f.object %> 
+
+        <div class="user-form-group">
+          <%= f.label :image, "プロフィール画像" %>
+          <% if current_user.image.present? %> 
+            <%= image_tag current_user.image , id: 'user-img' %>
+          <% else %>
+            <%= image_tag "default.png", id: "default-image" %>
+          <% end %>
+            <div id="prev-image"></div>
+            <%= f.file_field :image, id: "user-image" %>
+        </div>
+        <div class="user-form-group">
+          <div class='user-form-text-wrap'>
+            <label class="user-form-text">ユーザー名(10文字以内)</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_field :username, class:"input-default", id:"username", placeholder:"例) トマト太郎", maxlength:"10", autofocus: true %>
+        </div>
+        <div class="user-form-group">
+          <div class='user-form-text-wrap'>
+            <label class="user-form-text">メールアドレス</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可" %>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-      <% end %>
+        <% end %>
 
-      <div class="user-form-group">
-        <div class='user-form-text-wrap'>
-          <label class="user-form-text">パスワード</label>
-          <span class="indispensable">必須</span>
+        <div class="user-form-group">
+          <div class='user-form-text-wrap'>
+            <label class="user-form-text">パスワード</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <div class="login__attention">
+            <p class='info-text'>※パスワード以外の変更は現在のパスワードをご入力ください</p>
+            <p class='info-text'>※パスワードを変更は新しいパスワードをご入力ください</p>
+          </div>
+          <%= f.password_field :password, class:"input-default", id:"password", placeholder:"半角英数の両方含めて6文字以上", autocomplete: "new-password" %>
         </div>
-        <div class="login__attention">
-          <p class='info-text'>※パスワード以外の変更は現在のパスワードをご入力ください</p>
-          <p class='info-text'>※パスワードを変更は新しいパスワードをご入力ください</p>
+        <div class="user-form-group">
+          <div class='user-form-text-wrap'>
+            <label class="userform-text">パスワード(確認)</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい", autocomplete: "new-password" %>
         </div>
-        <%= f.password_field :password, class:"input-default", id:"password", placeholder:"半角英数の両方含めて6文字以上", autocomplete: "new-password" %>
-      </div>
-      <div class="user-form-group">
-        <div class='user-form-text-wrap'>
-          <label class="userform-text">パスワード(確認)</label>
-          <span class="indispensable">必須</span>
+        <div class="user-form-group">
+          <%= f.label :profile, "プロフィール"%><br />
+          <%= f.text_area :profile, class:"profile-text", id:"user-profile", placeholder:"例）主にトマトやきゅうりなどの野菜を育てています。（400文字まで）" ,maxlength:"400" %>
         </div>
-        <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい", autocomplete: "new-password" %>
-      </div>
-      <div class="user-form-group">
-        <%= f.label :profile, "プロフィール"%><br />
-        <%= f.text_area :profile, class:"profile-text", id:"user-profile", placeholder:"例）主にトマトやきゅうりなどの野菜を育てています。（400文字まで）" ,maxlength:"400" %>
-      </div>
-      <div class="register-btn">
-        <%= f.submit "変更する", class: "register-blue-btn" %>
-      </div>
-      <div class="account-delete">
-          <div class='delete-attention'>
-            <span class="indispensable">注意</span>
-            <label class="form-text">アカウントを削除する場合はこちらから</label>
-         </div>
-      </div>
-      <div class="delete-btn">
-         <%= button_to "退会する", registration_path(resource_name), data: { confirm: "本当に退会しますか？" }, method: :delete, class: "delete-red-btn" %>
-      </div>
-    <% end %>
+        <div class="register-btn">
+          <%= f.submit "変更する", class: "register-blue-btn" %>
+        </div>
+        <div class="account-delete">
+            <div class='delete-attention'>
+              <span class="indispensable">注意</span>
+              <label class="form-text">アカウントを削除する場合はこちらから</label>
+           </div>
+        </div>
+        <div class="delete-btn">
+          <%= button_to "退会する", registration_path(current_user), data: { confirm: "本当に退会しますか？" }, method: :delete, class: "delete-red-btn" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

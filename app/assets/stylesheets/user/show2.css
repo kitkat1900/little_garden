@@ -1,0 +1,127 @@
+.user-show-main {
+  margin: 30px auto;
+  width: 70%;
+  background-color: #fff;
+  border: solid 2px #00a400;
+  border-radius: 10px;
+}
+
+.user-show-wrap {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.user-show-header {
+
+}
+
+.user-show-header-text {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 25px;
+  color: #818181;
+}
+
+.user-show-content {
+  margin-top: 30px;
+
+}
+
+.user-show-menu {
+  display: flex;
+}
+
+.user-show-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.user-show-img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #00a400;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.user-show-box {
+  width: 70%;
+}
+
+.user-show-name {
+  width: 70%;
+  margin: auto;
+  font-size: 25px;
+  font-weight: bold;
+  color: #818181;
+  text-align: center;
+  border-bottom: 2px solid #00a400;
+  padding-bottom: 5px;
+}
+
+.user-show-icons {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+  text-align: center;
+}
+
+.user-show-post-box,
+.user-show-room-box,
+.user-show-logout-box,
+.user-show-list-box,
+.user-show-star-box,
+.user-show-edit-box {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.user-show-post-box:hover,
+.user-show-room-box:hover,
+.user-show-logout-box:hover,
+.user-show-list-box:hover,
+.user-show-star-box:hover,
+.user-show-edit-box:hover {
+  background-color: #ebeced;
+}
+
+.user-show-post,
+.user-show-room,
+.user-show-logout,
+.user-show-list,
+.user-show-star,
+.user-show-edit {
+  color: #818181;
+  font-size: 15px;
+}
+
+
+.user-show-post-image,
+.user-show-room-image,
+.user-show-logout-image,
+.user-show-list-image,
+.user-show-star-image,
+.user-show-edit-image {
+  width: 58px;
+  height: 58px;
+  margin: 0 15px 0 15px;
+  border: 1px solid #00a400;
+  border-radius: 100%;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-show-profile{
+  margin-top: 30px;
+  font-size: 15px;
+  padding: 1em;
+  background-color: #fff;
+  border: 1px solid #00a400;
+  border-radius: 10px;
+}

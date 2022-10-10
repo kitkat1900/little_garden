@@ -9,7 +9,7 @@
   border: none;
   color: #fff;
   background-color: #00a400;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -20,6 +20,10 @@
 .login-flash-message {
   text-align: center;
   color: red;
+}
+
+.account-signup {
+  margin: 30px 30px 15px 30px;
 }
 
 hr {

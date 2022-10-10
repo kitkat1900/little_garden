@@ -2,58 +2,60 @@
   <%= render "shared/header" %>
   <div class="main">
     <%= render "shared/sidebar" %>
-    <%= form_with model: @user, id: 'new_post', url: user_registration_path, class: 'user-form-main', local: true do |f| %>
-      <div class='user-form-wrap'>
-        <div class='user-form-header'>
-          <h1 class='user-form-header-text'>
-            新規登録
-          </h1>
-        </div>
+    <div class='user-form-main'>
+      <%= form_with model: @user, id: 'new_post', url: user_registration_path, class: 'user-form-signup', local: true do |f| %>
+        <div class='user-form-wrap'>
+          <div class='user-form-header'>
+            <h1 class='user-form-header-text'>
+              新規登録
+            </h1>
+          </div>
 
-        <%= render 'shared/error_messages', model: f.object %>
+          <%= render 'shared/error_messages', model: f.object %>
 
-        <div class="user-form-group">
-          <label class="user-form-text">プロフィール画像</label>
-          <div id="prev-image"></div>
-          <%= image_tag "default.png", id: "default-image" %>
-          <%= f.file_field :image, id: "user-image" %>
-        </div>
-        <div class="user-form-group">
-          <div class='user-form-text-wrap'>
-            <label class="f-user-orm-text">ユーザー名(10文字以内)</label>
-            <span class="indispensable">必須</span>
+          <div class="user-form-group">
+            <label class="user-form-text">プロフィール画像</label>
+            <div id="prev-image"></div>
+            <%= image_tag "default.png", id: "default-image" %>
+            <%= f.file_field :image, id: "user-image" %>
           </div>
-          <%= f.text_field :username, class:"input-default", id:"username", placeholder:"例) トマト太郎", maxlength:"20", autofocus: true %>
-        </div>
-        <div class="user-form-group">
-          <div class='user-form-text-wrap'>
-            <label class="user-form-text">メールアドレス</label>
-            <span class="indispensable">必須</span>
+          <div class="user-form-group">
+            <div class='user-form-text-wrap'>
+              <label class="user-form-text">ユーザー名(10文字以内)</label>
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.text_field :username, class:"input-default", id:"username", placeholder:"例) トマト太郎", maxlength:"20", autofocus: true %>
           </div>
-          <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可" %>
-        </div>
-        <div class="user-form-group">
-          <div class='user-form-text-wrap'>
-            <label class="user-form-text">パスワード</label>
-            <span class="indispensable">必須</span>
+          <div class="user-form-group">
+            <div class='user-form-text-wrap'>
+              <label class="user-form-text">メールアドレス</label>
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可" %>
           </div>
-          <%= f.password_field :password, class:"input-default", id:"password", placeholder:"半角英数の両方含めて6文字以上" %>
-        </div>
-        <div class="user-form-group">
-          <div class='user-form-text-wrap'>
-            <label class="user-form-text">パスワード(確認)</label>
-            <span class="indispensable">必須</span>
+          <div class="user-form-group">
+            <div class='user-form-text-wrap'>
+              <label class="user-form-text">パスワード</label>
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.password_field :password, class:"input-default", id:"password", placeholder:"半角英数の両方含めて6文字以上" %>
           </div>
-          <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
+          <div class="user-form-group">
+            <div class='user-form-text-wrap'>
+              <label class="user-form-text">パスワード(確認)</label>
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
+          </div>
+          <div class="user-form-group">
+            <label class="user-form-text">プロフィール</label>
+            <%= f.text_area :profile, class:"profile-text", id:"user-profile", placeholder:"例）主にトマトやきゅうりなどの野菜を育てています。（1,000文字まで）" ,maxlength:"400" %>
+          </div>
+          <div class='register-btn'>
+            <%= f.submit "会員登録" ,class:"register-blue-btn" %>
+          </div>
         </div>
-        <div class="user-form-group">
-          <label class="user-form-text">プロフィール</label>
-          <%= f.text_area :profile, class:"profile-text", id:"user-profile", placeholder:"例）主にトマトやきゅうりなどの野菜を育てています。（1,000文字まで）" ,maxlength:"400" %>
-        </div>
-        <div class='register-btn'>
-          <%= f.submit "会員登録" ,class:"register-blue-btn" %>
-        </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

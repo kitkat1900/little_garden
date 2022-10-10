@@ -1,114 +1,111 @@
 <div class= "app">
-<%= render "shared/header" %>
-
-<div class="user-show-main">
-  <%= render "shared/sidebar" %>
-  <div class="user-show-contents">
-      <div class="form-top profile">
-       <p>プロフィール</p>
-      </div>
-     <div class="profile-main">
-       <div class="profile-inner">
-          <div class="profile-user-image">
-                <% if @user.image.present?%>
-                  <%= image_tag @user.image, class: "profile-user-img" %>
-                <% else %>
-                  <%= image_tag "default.png", class: "profile-user-img" %>
-                <% end %>
+  <%= render "shared/header" %>
+  <div class="main">
+    <%= render "shared/sidebar" %>
+    <div class="user-show-main">
+      <div class='user-show-wrap'>
+        <div class='user-show-header'>
+          <h1 class='user-show-header-text'>
+            プロフィール
+          </h1>
+        </div>
+      <div class="user-show-content">
+        <div class='user-show-menu'>
+          <div class="user-show-image">
+            <% if @user.image.present?%>
+              <%= image_tag @user.image, class: "user-show-img" %>
+            <% else %>
+              <%= image_tag "default.png", class: "user-show-img" %>
+            <% end %>
           </div>
           
-          <div class="profiles-inner-user">
-                <div class="profile-user-names">
-                    <div class="profile-user-name">
-                      <%= @user.username %>
+          <div class="user-show-box">
+            <div class="user-show-name">
+                <%= @user.username %>
+            </div>
+
+             <%# ログインしているページが本人か確認する %>
+            <% if user_signed_in? && current_user.id == @user.id %>
+              <ul class="user-show-icons">
+                <li class="user-show-list-box">
+                  <%= link_to "#" do %>
+                    <div class="user-show-list-image">
+                      <i class="fa-solid fa-bag-shopping fa-2x" style="color:black;"></i>
                     </div>
-                </div>
-
-                <%# ログインしているページが本人か確認する %>
-                <% if user_signed_in? && current_user.id == @user.id %>
-                    <ul class="profile-user-icons">
-                      <li>
-                        <div class="user-icons" >
-                          <%= link_to "#" do %>
-                            <i class="fa-solid fa-bag-shopping fa-2x icon-b" style="color:black;"></i>
-                          <% end %>
-                        </div>
-                        <div><%= link_to "Myリスト", "#", class: "user-list" %></div>
-                      </li>
-                      <li>
-                        <div class="user-icons" >
-                          <%= link_to "#" do %>
-                            <i class="fa-regular fa-star fa-2x icon-b" style="color:black;"></i>
-                          <% end %>
-                        </div>
-                        <div><%= link_to "お気に入り", "#", class: "user-star" %></div>
-                      </li>
-                      <li>
-                        <div class="user-icons" >
-                          <%= link_to new_article_path do %>
-                            <i class="fa-regular fa-pen-to-square fa-2x icon-b" style="color:black;"></i>
-                          <% end %>
-                        </div>
-                        <div><%= link_to "投稿", "#", class: "user-post" %></div>
-                      </li>
-                      <li>
-                        <div class="user-icons" id="user-edit-btn">
-                          <%= link_to edit_user_registration_path do %>
-                            <i class="fa-solid fa-user-pen fa-2x icon-b" style="color:black;"></i>
-                          <% end %>
-                        </div>
-                        <div><%= link_to "編集", edit_user_registration_path, class: "user-edit" %></div>
-                      </li>
-                     <li>
-                        <div class="user-icons" id="user-edit-btn">
-                          <%= link_to destroy_user_session_path, method: :delete do %>
-                            <i class="fa-solid fa-arrow-right-from-bracket fa-2x icon-b" style="color:black;"></i>
-                          <% end %>
-                        </div>
-                        <div><%= link_to "ログアウト", edit_user_registration_path, class: "user-edit" %></div>
-                      </li>
-                    </ul>
-                <% else %>
-                    <div class="profile-user-follows"> 
-                      <%# <p>フォロー</p><div class="profile-user-follow">３０</div>
-                      <p>フォロワー</p><div class="profile-user-follow">５０００</div> %>
-                      <%#= link_to "お気に入りの作品 ▼", favorites_user_path(@user), class: "profile-favorite" %> 
-                    </div> 
-                <% end %>
-                <%# /ログインしているページが本人か確認する %>
-
-
-                <div class="profile-user-profile">
-                    <div class="profile-user-prof">
-                       <%= simple_format(@user.profile) %>
+                    <span class="user-show-list">Myリスト</span>
+                  <% end %>
+                </li>
+                <li class="user-show-star-box">
+                  <%= link_to "#" do %>
+                    <div class="user-show-star-image">
+                      <i class="fa-regular fa-star fa-2x" style="color:black;"></i>
                     </div>
-                 </div>
+                    <span class="user-show-star">お気に入り</span>
+                  <% end %>
+                </li>
+                <li class="user-show-post-box">
+                  <%= link_to new_article_path do %>
+                    <div class="user-show-post-image" >
+                      <i class="fa-regular fa-pen-to-square fa-2x" style="color:black;"></i>
+                    </div>
+                    <span class="user-show-post">投稿</span>
+                  <% end %>
+                </li>
+                <li class="user-show-edit-box">
+                  <%= link_to edit_user_registration_path do %>
+                    <div class="user-show-edit-image" id="user-edit-btn">
+                      <i class="fa-solid fa-user-pen fa-2x" style="color:black;"></i>
+                    </div>
+                    <span class="user-show-edit">編集</span>
+                  <% end %>
+                </li>
+                <li class="user-show-logout-box">
+                  <%= link_to destroy_user_session_path, method: :delete do %>
+                    <div class="user-show-logout-image" id="user-edit-btn">
+                      <i class="fa-solid fa-arrow-right-from-bracket fa-2x" style="color:black;"></i>
+                    </div>
+                    <span class="user-show-logout">編集</span>
+                  <% end %>
+                </li>
+              </ul>
+            <% else %>
+              <div class="profile-user-follows"> 
+                 <%# <p>フォロー</p><div class="profile-user-follow">３０</div>
+                 <p>フォロワー</p><div class="profile-user-follow">５０００</div> %>
+                 <%#= link_to "お気に入りの作品 ▼", favorites_user_path(@user), class: "profile-favorite" %> 
+              </div> 
+            <% end %>
+            
+               <%# /ログインしているページが本人か確認する %>
           </div>
-
-       </div>
-     </div>
-
-     <div class="item__wrapper">
+        </div>
+        <div class="user-show-profile">
+        
+            <%= simple_format(@user.profile) %>
+   
+        </div>
+      </div>
+    </div>
+    <div class="item__wrapper">
           <%# @items.each do |items| %>
           <%# 部分テンプレートでフォームを表示する %>
           <%#= render partial: "items/items", locals: { items: items } %>
           <%# end %>
+    </div>
      </div>
-
+    </div>
   </div>
 </div>
 
 <% if @user_items.present? %>
-      <div class="slider_toppage">
-        <p class="slider_toppage_p"><%= @user.name %>さんの作品展</p>
-
-        <div class="slider toppage">
-           <% @user_items.each do |items| %>
-             <div><%= link_to image_tag( items.image , class: :slider__img_toppage ),  item_path(items.id)%>
-             </div>
-           <% end %>
-          </div>
-       </div>
+  <div class="slider_toppage">
+    <p class="slider_toppage_p"><%= @user.name %>さんの作品展</p>
+    <div class="slider toppage">
+      <% @user_items.each do |items| %>
+        <div><%= link_to image_tag( items.image , class: :slider__img_toppage ),  item_path(items.id)%></div>
+      <% end %>
+    </div>
+  </div>
 <% end %>
 
 

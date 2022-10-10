@@ -1,0 +1,87 @@
+.article-form-main {
+  margin: 30px auto;
+  width: 50%;
+  background-color: #fff;border: solid 1px #00a400;
+  border-radius: 10px;
+}
+
+.article-form-header {
+  margin-bottom: 30px;
+}
+
+.article-form-header-text {
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #565656;
+  border-bottom: 2px solid #00a400;
+}
+
+.article-form-group{
+  width: 90%;
+  margin: 0 auto 30px;
+}
+
+.article-form-group label{
+  color: #818181;
+  font-size: 15px;
+}
+
+#article-image {
+  color: #818181;
+  font-size: 15px;
+}
+
+.article-title{
+  width: 500px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.article-text{
+  height: 200px;
+  font-size: 15px;
+}
+
+.select-box {
+  width: 50%;
+  height: 30px;
+  color: #818181;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 10px;
+  margin: auto;
+  padding: 5px;
+  outline-color: #00a400;
+  cursor: pointer;
+}
+
+.article-title {
+  width: 100%;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 10px;
+  outline-color: #00a400;
+  cursor: pointer;
+}
+
+.article-btn{
+  width: 30%;
+  margin: 0 auto;
+}
+
+.article-blue-btn{
+  width: 100%;
+  text-align: center;
+  border: none;
+  color: #fff;
+  background-color: #1877f2;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.article-blue-btn:hover {
+  color: #d3d3d3;
+}
