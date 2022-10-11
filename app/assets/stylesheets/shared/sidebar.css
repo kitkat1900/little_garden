@@ -20,7 +20,7 @@
 
 .sidebar-user-name-box,
 .sidebar-user-room-box,
-.sidebar-user-list-box,
+.sidebar-user-follow-box,
 .sidebar-user-star-box,
 .sidebar-user-edit-box {
   height: 110px;
@@ -30,7 +30,7 @@
 
 .sidebar-user-name-box:hover,
 .sidebar-user-room-box:hover,
-.sidebar-user-list-box:hover,
+.sidebar-user-follow-box:hover,
 .sidebar-user-star-box:hover,
 .sidebar-user-edit-box:hover {
   background-color: #ebeced;
@@ -52,7 +52,7 @@
 
 .user-room-image,
 .user-login-image,
-.user-list-image,
+.user-follow-image,
 .user-star-image,
 .user-edit-image {
   height: 58px;
@@ -69,7 +69,7 @@
 #user-name-image:hover,
 .user-room-image:hover,
 .user-login-image:hover,
-.user-list-image:hover,
+.user-follow-image:hover,
 .user-star-image:hover,
 .user-edit-image:hover {
   background-color: #fff;
@@ -79,7 +79,7 @@
 
 .sidebar-user-room,
 .sidebar-user-login,
-.sidebar-user-list,
+.sidebar-user-follow,
 .sidebar-user-star,
 .sidebar-user-edit,
 .sidebar-user-name {
@@ -95,7 +95,7 @@
 
 .sidebar-user-room:hover,
 .sidebar-user-login:hover,
-.sidebar-user-list:hover,
+.sidebar-user-follow:hover,
 .sidebar-user-star:hover,
 .sidebar-user-edit:hover,
 .sidebar-user-name:hover {

@@ -33,8 +33,16 @@
         <table class="detail-table">
           <tbody>
             <tr>
+              <th class="detail-item">状態</th>
+              <% if @article.status_private? %>
+                <td class="detail-value"><%= t ".private" %></td>
+              <% else @article.status_public? %>
+                <td class="detail-value"><%= t ".public" %></td>
+              <% end %>
+            </tr>
+            <tr>
               <th class="detail-item">投稿日</th>
-              <td class="detail-value"><%= l @article.created_at, format: :short %></td>
+              <td class="detail-value"><%= l @article.created_at, format: :long %></td>
             </tr>
             <tr>
               <th class="detail-item">投稿者</th>

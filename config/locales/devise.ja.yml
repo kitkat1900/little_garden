@@ -10,6 +10,7 @@ ja:
         text: 内容
         category_id: カテゴリー
         image: 画像
+        status: 状態
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'

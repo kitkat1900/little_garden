@@ -64,16 +64,26 @@
                     <div class="user-show-logout-image" id="user-edit-btn">
                       <i class="fa-solid fa-arrow-right-from-bracket fa-2x" style="color:black;"></i>
                     </div>
-                    <span class="user-show-logout">編集</span>
+                    <span class="user-show-logout">ログアウト</span>
                   <% end %>
                 </li>
               </ul>
             <% else %>
-              <div class="profile-user-follows"> 
+              <ul class="user-show-icons">
+                <li class="user-show-item-box">
+                  <%= link_to "#" do %>
+                    <div class="user-show-item-image" id="user-edit-btn">
+                      <i class="fa-regular fa-image fa-2x" style="color:black;"></i>
+                    </div>
+                    <span class="user-show-item">投稿</span>
+                  <% end %>
+                </li>
+              <%#div class="profile-user-follows">
                  <%# <p>フォロー</p><div class="profile-user-follow">３０</div>
                  <p>フォロワー</p><div class="profile-user-follow">５０００</div> %>
                  <%#= link_to "お気に入りの作品 ▼", favorites_user_path(@user), class: "profile-favorite" %> 
-              </div> 
+              <%#/div%> 
+              </ul>
             <% end %>
             
                <%# /ログインしているページが本人か確認する %>
@@ -86,16 +96,80 @@
         </div>
       </div>
     </div>
-    <div class="item__wrapper">
-          <%# @items.each do |items| %>
-          <%# 部分テンプレートでフォームを表示する %>
-          <%#= render partial: "items/items", locals: { items: items } %>
-          <%# end %>
+
+  <div class='user-show-article-contents'>
+    <div class='user-show-article-user-box'>
+      <div class="user-show-article-user-image">
+        <% if @user.image.present?%>
+          <%= image_tag @user.image, class: "user-show-article-user-img" %>
+        <% else %>
+          <%= image_tag "default.png", class: "user-show-article-user-img" %>
+        <% end %>
+      </div>
+      <div class="user-show-article-user" >
+        <%= @user.username %>さんの投稿
+      </div>
     </div>
-     </div>
-    </div>
+    <% if user_signed_in? && current_user.id == @user.id %>
+      <ul class='user-show-article-lists'>
+        <% @unless_articles.each do |article| %>
+          <li class='user-show-article-list'>
+            <%= link_to article_path(article.id), method: :get do %>
+              <div class='user-show-article-box'>
+                <% if article.status_private? %>
+                  <div class='user-show-article-private'>
+                    <%= t ".private" %>
+                <% else article.status_public? %>
+                  <div class='user-show-article-public'>
+                    <%= t ".public" %>
+                <% end %>
+                </div>
+                <div class='user-show-article-img-content'>
+                  <%= image_tag article.image, class: "user-show-article-img" if article.image.attached? %>
+                </div>
+                <div class='user-show-article-name'>
+                  <%= article.article_name %>
+                </div>
+                <div class='user-show-article-date'>
+                  <%= l article.created_at, format: :long %>
+                </div>
+                <div class='user-show-article-like-box'>
+                  <div class='user-show-article-like'>
+                    <i class="fa-solid fa-thumbs-up icon-like"></i>
+                  </div>
+                  <div class='user-show-article-like-count'>
+                    <%= '5000' %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <ul class='user-show-article-lists'>
+        <% @articles.each do |article| %>
+          <li class='user-show-article-list'>
+            <%= link_to article_path(article.id), method: :get do %>
+              <div class='user-show-article-box'>
+                <div class='user-show-article-img-content'>
+                  <%= image_tag article.image, class: "user-show-article-img" if article.image.attached? %>
+                </div>
+                <div class='user-show-article-name'>
+                  <%= article.article_name %>
+                </div>
+                <div class='user-show-article-date'>
+                  <%= l article.created_at, format: :long %>
+                </div>
+              </div>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
   </div>
-</div>
+
+
 
 <% if @user_items.present? %>
   <div class="slider_toppage">

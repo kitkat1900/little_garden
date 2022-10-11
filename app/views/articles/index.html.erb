@@ -30,7 +30,7 @@
                           <div class='article-like'>
                             <i class="fa-solid fa-thumbs-up icon-like"></i>
                           </div>
-                          <div class='article-like-times'>
+                          <div class='article-like-count'>
                             <%= '5000000' %>
                           </div>
                         </div>
@@ -39,7 +39,7 @@
                             <%= article.user.username %>
                           </div>
                           <div class='article-date'>
-                            <%= l article.created_at, format: :short %>
+                            <%= l article.created_at, format: :long %>
                           </div>
                         </div>
                       </div>

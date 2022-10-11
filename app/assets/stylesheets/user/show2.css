@@ -75,7 +75,8 @@
 .user-show-logout-box,
 .user-show-list-box,
 .user-show-star-box,
-.user-show-edit-box {
+.user-show-edit-box,
+.user-show-item-box {
   padding: 5px;
   border-radius: 10px;
 }
@@ -85,7 +86,8 @@
 .user-show-logout-box:hover,
 .user-show-list-box:hover,
 .user-show-star-box:hover,
-.user-show-edit-box:hover {
+.user-show-edit-box:hover,
+.user-show-item-box:hover {
   background-color: #ebeced;
 }
 
@@ -94,7 +96,8 @@
 .user-show-logout,
 .user-show-list,
 .user-show-star,
-.user-show-edit {
+.user-show-edit,
+.user-show-item {
   color: #818181;
   font-size: 15px;
 }
@@ -105,7 +108,8 @@
 .user-show-logout-image,
 .user-show-list-image,
 .user-show-star-image,
-.user-show-edit-image {
+.user-show-edit-image,
+.user-show-item-image {
   width: 58px;
   height: 58px;
   margin: 0 15px 0 15px;
@@ -115,6 +119,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  object-fit: cover;
 }
 
 .user-show-profile{
@@ -124,4 +129,97 @@
   background-color: #fff;
   border: 1px solid #00a400;
   border-radius: 10px;
+}
+
+.user-show-article-user-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-show-article-user {
+  color: #818181;
+  font-size: 15px;
+}
+
+.user-show-article-box {
+  width: 80%;
+  margin: 10px auto;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #00a400;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.user-show-article-box:hover {
+  background-color: #ebeced;
+}
+
+.user-show-article-private {
+  width: 50px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  background-color: #CC0000;
+  border: 1px solid #CC0000;
+  border-radius: 10px;
+}
+
+.user-show-article-public {
+  width: 50px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  background-color: #00a400;
+  border: 1px solid #00a400;
+  border-radius: 10px;
+}
+
+.user-show-article-user-img,
+.user-show-article-img {
+  width: 58px;
+  height: 58px;
+  margin: 0 15px;
+  border: 1px solid #00a400;
+  border-radius: 100%;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
+
+.user-show-article-img-content {
+
+}
+
+.user-show-article-name {
+  width: 50%;
+  font-size: 15px;
+  color: #818181;
+}
+
+.user-show-article-date {
+  font-size: 12px;
+  color: #818181;
+  padding: 5px;
+}
+
+.user-show-article-like-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user-show-article-like {
+  color: #818181;
+  padding: 5px;
+}
+
+.user-show-article-like-count {
+  font-size: 12px;
+  padding: 5px;
+  color: #818181;
 }

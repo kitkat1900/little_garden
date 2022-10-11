@@ -153,9 +153,12 @@
 .header-nav3,
 .header-nav4 {
   top: 59px;
-  color: #73735a;
+  color: #fff;
+  background-color: #16181C;
   margin-top: 2px;
+  padding: 5px;
   text-align: center;
+  border-radius: 10px;
 }
 
 .header-nav5,
@@ -164,7 +167,11 @@
 .header-nav8 {
   top: 59px;
   margin-top: 2px;
-  color: #73735a;
+  color: #fff;
+  background-color: #16181C;
+  margin-top: 2px;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .header-nav5{

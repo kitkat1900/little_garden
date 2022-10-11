@@ -5,3 +5,10 @@ ja:
       status: '状態'
       public: '公開'
       private: '非公開'
+    show:
+      public: '公開'
+      private: '非公開'
+  users:
+    show:
+      public: '公開'
+      private: '非公開'
