@@ -11,12 +11,12 @@
 }
 
 .index-sort {
-  width: 100%;
-  padding: 5px 10px;
+  margin: auto;
+  padding: 10px;
 }
 
 .index-sort>.index-sort-title {
-  font-size: 15px;
+  font-size: 20px;
   color: #818181;
 }
 
@@ -50,6 +50,9 @@
   height: 200px;
   border-radius: 10px;
   object-fit: contain;
+  display: block;
+  margin: auto;
+  background-color: black;
 }
 
 

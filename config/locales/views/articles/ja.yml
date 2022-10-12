@@ -8,6 +8,9 @@ ja:
     show:
       public: '公開'
       private: '非公開'
+    edit:
+      public: '公開'
+      private: '非公開'
   users:
     show:
       public: '公開'

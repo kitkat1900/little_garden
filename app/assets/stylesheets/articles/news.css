@@ -1,7 +1,7 @@
 .article-form-main {
   margin: 30px auto;
   width: 50%;
-  background-color: #fff;border: solid 1px #00a400;
+  background-color: #fff;border: solid 2px #00a400;
   border-radius: 10px;
 }
 
@@ -35,15 +35,20 @@
   font-size: 15px;
 }
 
-.article-title{
-  width: 500px;
+.article-title {
+  width: 100%;
   font-size: 15px;
   padding: 5px;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 10px;
+  outline-color: #00a400;
+  cursor: pointer;
 }
 
 .article-text{
   height: 200px;
   font-size: 15px;
+  padding: 5px;
 }
 
 .select-box {
@@ -54,14 +59,6 @@
   border-radius: 10px;
   margin: auto;
   padding: 5px;
-  outline-color: #00a400;
-  cursor: pointer;
-}
-
-.article-title {
-  width: 100%;
-  border: 1.5px solid #d3d3d3;
-  border-radius: 10px;
   outline-color: #00a400;
   cursor: pointer;
 }
