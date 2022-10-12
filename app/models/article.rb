@@ -3,6 +3,7 @@ class Article < ApplicationRecord
   belongs_to :category
   has_one_attached :image
   belongs_to :user
+  has_many :comments
 
   enum status: { public: 0, private: 1 }, _prefix: true
 
