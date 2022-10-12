@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "articles#index"
   resources :users, only: :show
-  resources :articles, only: [:new, :create, :show, :edit, :update, :destroy]
+  resources :articles, only: [:new, :create, :show, :edit, :update, :destroy] do
+    resources :comments, only: :create
+   end
 end

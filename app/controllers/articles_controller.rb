@@ -22,6 +22,8 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @comments = @article.comments.includes(:user)
+    @comment = Comment.new
     if @article.status_private? && @article.user != current_user
       redirect_to root_path
     end
