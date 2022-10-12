@@ -90,9 +90,7 @@
           </div>
         </div>
         <div class="user-show-profile">
-        
-            <%= simple_format(@user.profile) %>
-   
+          <%= simple_format(@user.profile) %>
         </div>
       </div>
     </div>
@@ -123,7 +121,7 @@
                   <div class='user-show-article-public'>
                     <%= t ".public" %>
                 <% end %>
-                </div>
+                  </div>
                 <div class='user-show-article-img-content'>
                   <%= image_tag article.image, class: "user-show-article-img" if article.image.attached? %>
                 </div>

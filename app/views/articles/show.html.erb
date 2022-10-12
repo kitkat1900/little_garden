@@ -1,82 +1,69 @@
 <div class= "app">
-<%= render "shared/header" %>
-
-<%# 記事の概要 %>
+  <%= render "shared/header" %>
   <div class="main">
-  <%= render "shared/sidebar" %>
-  <div class="article-show-main">
-    <%#div class="top-links">
-      <a href="/" class="top-btn">
-        top ＞
-      </a>
-      <a href="#" class="category-btn"><%= @article.category.name %></a>
-    <%#/div%>
-
-    <div class="article-show-title">
-      <h2 class="article-show-name">
-        <%= @article.article_name %>
-      </h2>
-      <div class="article-navi">
+    <%= render "shared/sidebar" %>
+    <div class="article-show-main">
+      <div class="article-show-category">
+        <%= @article.category.name %>
+      </div>
+      <div class='article-show-user-info'>
         <% if user_signed_in? && current_user.id == @article.user_id %>
-          <%= link_to "編集", edit_article_path(@article.id), method: :get, class: "article-edit-btn" %>
-          <%= link_to "削除", article_path(@article.id), method: :delete, class:"article-destroy-btn" %>
+          <% if @article.status_private? %>
+            <div class='article-show-article-private'>
+              <%= t ".private" %>
+            </div>
+          <% else @article.status_public? %>
+            <div class='article-show-article-public'>
+              <%= t ".public" %>
+            </div>
+          <% end %>
         <% end %>
-      </div>
-    </div>
-    <div class="article-show">
-      <div class="article-img-box">
-        <div class="item-img-content">
-          <%= image_tag @article.image ,class:"item-box-img" %>
+        <div class='article-show-user-image'>
+          <%= link_to (image_tag @article.user.image, class: "article-show-user-img"), user_path(@article.user.id) %>
+        </div>
+        <div class='article-show-user-data'>
+          <div class='article-show-user-name'>
+            <%= link_to  @article.user.username, user_path(@article.user.id), class: "article-show-username" %>
+          </div>
+          <div class='article-show-article-date'>
+            <%= l @article.created_at, format: :long %>
+          </div>
+        </div>
+        <div class="article-show-navi">
+          <% if user_signed_in? && current_user.id == @article.user_id %>
+            <%= link_to "編集", edit_article_path(@article.id), method: :get, class: "article-edit-btn" %>
+            <%= link_to "削除", article_path(@article.id), method: :delete, class:"article-destroy-btn" %>
+          <% end %>
         </div>
       </div>
-      <div class="article-info-box">
-        <table class="detail-table">
-          <tbody>
-            <tr>
-              <th class="detail-item">状態</th>
-              <% if @article.status_private? %>
-                <td class="detail-value"><%= t ".private" %></td>
-              <% else @article.status_public? %>
-                <td class="detail-value"><%= t ".public" %></td>
-              <% end %>
-            </tr>
-            <tr>
-              <th class="detail-item">投稿日</th>
-              <td class="detail-value"><%= l @article.created_at, format: :long %></td>
-            </tr>
-            <tr>
-              <th class="detail-item">投稿者</th>
-              <td class="detail-value"><%= link_to  @article.user.username, "/users/#{@article.user.id}" %></td>
-            </tr>
-            <tr>
-              <th class="detail-item">カテゴリー</th>
-              <td class="detail-value"><%= @article.category.name %></td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="item-explain-box">
-          <span><%= @article.text %></span>
+      <div class="article-show-title">
+        <h2 class="article-show-name">
+          <%= @article.article_name %>
+        </h2>
+      </div>
+      <div class="article-show-img-box">
+        <div class="article-show-img-content">
+          <%= image_tag @article.image ,class:"article-show-box-img" %>
         </div>
- 
+      </div>
+      <div class="article-show-explain-box">
+        <span><%= simple_format(@article.text) %></span>
+      </div>
+
+       <%#div class="comment-box">
+         <form>
+         <textarea class="comment-text"></textarea>
+         <p class="comment-warn">
+          相手のことを考え丁寧なコメントを心がけましょう。
+          <br>
+          不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        </p>
+        <button type="submit" class="comment-btn">
+          <%#= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
+          <%#span>コメントする<span>
+         </button>
+        </form>
+      </div%>
     </div>
-  </div>
-  <%# /商品の概要 %>
-
-  <%#div class="comment-box">
-    <form>
-      <textarea class="comment-text"></textarea>
-      <p class="comment-warn">
-        相手のことを考え丁寧なコメントを心がけましょう。
-        <br>
-        不快な言葉遣いなどは利用制限や退会処分となることがあります。
-      </p>
-      <button type="submit" class="comment-btn">
-        <%#= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
-        <%#span>コメントする<span>
-      </button>
-    </form>
-  </div%>
-
-<%#= render "shared/second-footer"%>
   </div>
 </div>
