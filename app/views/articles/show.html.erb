@@ -49,7 +49,15 @@
       <div class="article-show-explain-box">
         <span><%= simple_format(@article.text) %></span>
       </div>
-
+      
+      <div class="comment-form">
+        <% if user_signed_in? %>
+          <%= form_with model: [@item, @comment], id: "comment-form" do |f| %>
+            <%= f.text_area :text , class: "comment-text"%>
+            <%= f.submit "コメントをする", class: "comment-submit" %>
+          <% end %>
+        <% end %>
+      </div>
        <%#div class="comment-box">
          <form>
          <textarea class="comment-text"></textarea>
