@@ -19,14 +19,14 @@
               <label class="user-form-text">メールアドレス</label>
               <span class="indispensable">必須</span>
             </div>
-            <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+            <%= f.email_field :email, class:"user-form-email", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
           </div>
           <div class="user-form-group">
             <div class='user-form-text-wrap'>
               <label class="user-form-text">パスワード</label>
               <span class="indispensable">必須</span>
             </div>
-            <%= f.password_field :password, class:"input-default", id:"password", placeholder:"半角英数の両方含めて6文字以上" %>
+            <%= f.password_field :password, class:"user-form-password", id:"password", placeholder:"半角英数の両方含めて6文字以上" %>
           </div>
           <div class='login-btn'>
             <%= f.submit "ログイン" ,class:"login-green-btn" %>

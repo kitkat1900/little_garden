@@ -1,9 +1,10 @@
 .article-show-main {
-  margin: 30px auto;
+  margin: 30px auto 0;
   width: 70%;
   background-color: #fff;
   border: solid 2px #00a400;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .article-show-category {
@@ -147,7 +148,7 @@
   height: 40vh;
   width: 50vw;
   min-height: 350px;
-  background-color: black;
+  background-color: #16181C;
   object-fit: contain;
   border-radius: 10px;
   border: solid 1px #00a400;
@@ -166,73 +167,157 @@
 
 /* /商品の概要 */
 
-.comment-box {
-  width: 100vw;
-  background-color: #fff;
-  margin: 5vh 0;
-  text-align: center;
+
+
+
+
+
+
+
+#article-show-comments {
+  width: 90%;
+  height: 80vh;
+  margin: auto;
+  overflow: scroll;
 }
 
-.comment-text {
-  width: 100%;
-  height: 100px;
-  padding: 10px;
-  border: solid 2px #dedede;
-  resize: none;
-}
-
-.comment-warn {
-  padding: 10px;
-  font-size: 14px;
-  margin: 10px 0px;
-  text-align: left;
-}
-
-.comment-btn {
-  line-height: 48px;
-  background-color: #3CCACE;
-  border: 1px solid #3CCACE;
-  color: #fff;
-  width: 50%;
-  min-width: 150px;
-  font-size: 18px;
-  border-radius: 100px;
-  margin-bottom: 2vh;
-  cursor: pointer;
-}
-
-.comment-flag {
+.article-show-comment-contents {
+  width: 90%;
   display: flex;
+  margin: 10px auto;
+}
+
+.article-show-comment-image img,
+#article-show-comment-image {
+  width: 45px;
+  height: 45px;
+  margin: 0 5px;
+  border: 1px solid #00a400;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.article-show-comment-info {
+ width: 100%;
+}
+
+.article-show-comment-username {
+  width: 100%;
+  display: block;
+  font-size: 15px;
+  padding: 3px 10px;
+  margin: 3px 0;
+  color: #818181;
+  border-radius: 10px;
+}
+
+.article-show-comment-username:hover {
+  background-color: #d3d3d3;
+}
+
+.article-show-comment-box {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #00a400;
+  border-radius: 10px;
+  background-color: #d3d3d3;
+}
+
+.article-show-comment-field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-show-comment {
+  width: 90%;
+  font-size: 15px;
+  color: #818181;
+}
+
+#article-show-comment-destroy-btn,
+.article-show-comment-destroy-btn {
+  width: 10%;
+  font-size: 15px;
+  color: #fff;
+  background-color: #CC0000;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#article-show-comment-destroy-btn:hover
+.article-show-comment-destroy-btn:hover {
+  color: #d3d3d3;
+  background-color: #CC0000;
+}
+
+.article-show-comment-date {
+  font-size: 10px;
+  color: #818181;
+  text-align: end;
+  margin-top: 5px;
+}
+
+.article-show-comment-form {
+  border-top: 1px solid #00a400;
+  background-color:#d3d3d3;
+}
+
+#article-show-comment-form {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.article-show-comment-form-image {
+  width: 10%;
+}
+
+#article-show-comment-form-image {
+  width: 45px;
+  height: 45px;
+  margin: auto;
+  border: 1px solid #00a400;
+  border-radius: 100%;
+  object-fit: cover;
+  display: block;
+  align-items: center;
+}
+
+.article-show-comment-form-box {
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.article-show-comment-text {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  color: #818181;
+  font-size: 15px;
+  display: block;
+  resize: none;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  outline-color: #00a400;
+}
+
+.article-show-comment-btn {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border: 1px solid #00a400;
+  display: block;
+  background-color: #fff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.comment-flag-icon {
-  margin: 10px 5px 0 0;
-}
-
-.comment-form{
-  display: flex;
-}
-
-.comment-text{
-  display: block;
-  margin-top: 20px;
-}
-
-.comment-submit{
-  display: block;
-  margin-top: 20px;
-}
-
-.comment{
-  display: flex;
-}
-
-.comment p{
-   margin: 0;
-}
-
-.user-info{
-  color: gray;
-  font-weight: bold;
+.article-show-comment-btn:hover {
+  background-color: #ebeced;
 }

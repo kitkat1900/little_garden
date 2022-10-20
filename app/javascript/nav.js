@@ -8,6 +8,7 @@ function pullDown() {
   const signupBtn = document.getElementById("signup-btn");
   const loginBtn = document.getElementById("login-btn");
   const logoutBtn = document.getElementById("logout-btn");
+  const commentBtn = document.getElementById("article-show-comment-btn");
   const pullDown = document.getElementById("pull-down");
   const pullDown2 = document.getElementById("pull-down2");
   const pullDown3 = document.getElementById("pull-down3");
@@ -16,6 +17,7 @@ function pullDown() {
   const pullDown6 = document.getElementById("pull-down6");
   const pullDown7 = document.getElementById("pull-down7");
   const pullDown8 = document.getElementById("pull-down8");
+  const pullDown9 = document.getElementById("pull-down9");
   
   homeBtn.addEventListener('mouseenter', function() {
     if (pullDown.getAttribute("style") == "display:block;") {
@@ -23,6 +25,7 @@ function pullDown() {
     } else {
       pullDown.setAttribute("style", "display:block;");
     }
+    console.log(pullDown9);
   });
   homeBtn.addEventListener('mouseleave', function() {
     if (pullDown) {
@@ -120,8 +123,23 @@ function pullDown() {
        pullDown8.removeAttribute("style", "display:block;");
     }
    });
- }
 
+   commentBtn.addEventListener('mouseenter', function() {
+    if (pullDown9.getAttribute("style") == "display:block;") {
+         pullDown9.removeAttribute("style", "display:block;");
+    } else {
+        pullDown9.setAttribute("style", "display:block;");
+    }
+    console.log("preview.jsが読み込まれました");
+   });
+  commentBtn.addEventListener('mouseleave', function() {
+    if (pullDown9) {
+       pullDown9.removeAttribute("style", "display:block;");
+    }
+    console.log("preview.jsが読み込まれました");
+   });
+
+ }
 };
 
 window.addEventListener('load', pullDown);
