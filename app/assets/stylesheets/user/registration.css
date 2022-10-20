@@ -48,7 +48,7 @@
 }
 
 .indispensable {
-  background-color: red;
+  background-color: #CC0000;
   color: #fff;
   font-size: 12px;
   font-weight: bold;
@@ -83,23 +83,30 @@
   margin: 10px auto;
 }
 
-.input-default,
-textarea{
+.user-form-username,
+.user-form-email,
+.user-form-password {
   width: 100%;
-  border: 1.5px solid #d3d3d3;
+  font-size: 15px;
+  border: 1px solid #d3d3d3;
   border-radius: 10px;
+  padding: 5px;
   display: block;
   margin: auto;
   outline-color: #00a400;
+  cursor: pointer;
 }
 
-textarea{
-  height: 100px;
-}
-
-input{
-  padding: 5px;
+.user-form-profile {
+  width: 100%;
+  height: 200px;
   font-size: 15px;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  padding: 5px;
+  outline-color: #00a400;
+  resize: none;
+  cursor: pointer;
 }
 
 #user-image {
@@ -119,12 +126,14 @@ input{
 
 .register-blue-btn{
   width: 100%;
+  font-size: 15px;
   text-align: center;
   border: none;
   color: #fff;
   background-color: #1877f2;
   border-radius: 10px;
   cursor: pointer;
+  padding: 5px;
 }
 
 .register-blue-btn:hover {
@@ -155,9 +164,10 @@ input{
   text-align: center;
   border: none;
   color: #fff;
-  background-color: red;
+  background-color: #CC0000;
   border-radius: 10px;
   cursor: pointer;
+  padding: 5px;
 }
 
 .delete-green-btn:hover {

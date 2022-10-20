@@ -5,12 +5,14 @@
 
 .login-green-btn {
   width: 100%;
+  font-size: 15px;
   text-align: center;
   border: none;
   color: #fff;
   background-color: #00a400;
   border-radius: 10px;
   cursor: pointer;
+  padding: 5px;
 }
 
 .login-green-btn:hover {

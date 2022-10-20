@@ -24,32 +24,32 @@
               <label class="user-form-text">ユーザー名(10文字以内)</label>
               <span class="indispensable">必須</span>
             </div>
-            <%= f.text_field :username, class:"input-default", id:"username", placeholder:"例) トマト太郎", maxlength:"20", autofocus: true %>
+            <%= f.text_field :username, class:"user-form-username", id:"username", placeholder:"例) トマト太郎", maxlength:"20", autofocus: true %>
           </div>
           <div class="user-form-group">
             <div class='user-form-text-wrap'>
               <label class="user-form-text">メールアドレス</label>
               <span class="indispensable">必須</span>
             </div>
-            <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可" %>
+            <%= f.email_field :email, class:"user-form-email", id:"email", placeholder:"PC・携帯どちらでも可" %>
           </div>
           <div class="user-form-group">
             <div class='user-form-text-wrap'>
               <label class="user-form-text">パスワード</label>
               <span class="indispensable">必須</span>
             </div>
-            <%= f.password_field :password, class:"input-default", id:"password", placeholder:"半角英数の両方含めて6文字以上" %>
+            <%= f.password_field :password, class:"user-form-password", id:"password", placeholder:"半角英数の両方含めて6文字以上" %>
           </div>
           <div class="user-form-group">
             <div class='user-form-text-wrap'>
               <label class="user-form-text">パスワード(確認)</label>
               <span class="indispensable">必須</span>
             </div>
-            <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
+            <%= f.password_field :password_confirmation, class:"user-form-password", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
           </div>
           <div class="user-form-group">
             <label class="user-form-text">プロフィール</label>
-            <%= f.text_area :profile, class:"profile-text", id:"user-profile", placeholder:"例）主にトマトやきゅうりなどの野菜を育てています。（1,000文字まで）" ,maxlength:"400" %>
+            <%= f.text_area :profile, class:"user-form-profile", id:"user-profile", placeholder:"例）主にトマトやきゅうりなどの野菜を育てています。（1,000文字まで）" ,maxlength:"400" %>
           </div>
           <div class='register-btn'>
             <%= f.submit "会員登録" ,class:"register-blue-btn" %>
