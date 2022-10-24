@@ -84,7 +84,7 @@
               <%= image_tag current_user.image, id: "article-show-comment-form-image" %>
             </div>
             <div class="article-show-comment-form-box">
-              <%= f.text_area :text , class: "article-show-comment-text"%>
+              <%= f.text_area :text , class: "article-show-comment-text", placeholder: 'コメントする'%>
               <%= button_tag type: "submit", class: "article-show-comment-btn", id: "article-show-comment-btn" do %>
                 <i class="fa-solid fa-share fa-2x" style="color:black;"></i>
               <% end%>
@@ -92,7 +92,9 @@
           <% end %>
         <% else %>
           <div id="article-show-comment-form">
-            <%= image_tag "default.png", id: "article-show-comment-form-image" %>
+            <div class="article-show-comment-form-image">
+              <%= image_tag "default.png", id: "article-show-comment-form-image" %>
+            </div>
             <div class="article-show-comment-form-login">
               <%= link_to "ログインしてコメントする", new_user_session_path, class: "article-show-comment-login-btn" %>
             </div>

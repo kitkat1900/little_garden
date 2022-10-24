@@ -274,7 +274,7 @@
 #article-show-comment-form-image {
   width: 45px;
   height: 45px;
-  margin: auto;
+  margin: 10px auto;
   border: 1px solid #00a400;
   border-radius: 100%;
   object-fit: cover;
@@ -321,17 +321,18 @@
 
 .article-show-comment-form-login {
   width: 90%;
-  height: 45px;
 }
 
 .article-show-comment-login-btn {
+  height: 45px;
   margin: 5px 10px;
   text-align: center;
   padding: 5px 10px;
+  font-size: 20px;
   color: #818181;
   display: block;
   border: 1px solid #00a400;
-  
+  border-radius: 10px;
 }
 
 .article-show-comment-login-btn:hover {
