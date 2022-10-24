@@ -110,7 +110,7 @@
     </div>
     <% if user_signed_in? && current_user.id == @user.id %>
       <ul class='user-show-article-lists'>
-        <% @unless_articles.each do |article| %>
+        <% @articles.each do |article| %>
           <li class='user-show-article-list'>
             <%= link_to article_path(article.id), method: :get do %>
               <div class='user-show-article-box'>

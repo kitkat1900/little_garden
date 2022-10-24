@@ -51,7 +51,9 @@
       </div>
       
       <div id="article-show-comments">
-        <h4>コメント</h4>
+        <h4 class="article-show-comment-title">
+          コメント(<%= @article.comments.count %>)
+        </h4>
         <% @article.comments.each do |comment| %>
           <div class='article-show-comment-contents'>
             <div class='article-show-comment-image'>
@@ -88,6 +90,13 @@
               <% end%>
             </div>
           <% end %>
+        <% else %>
+          <div id="article-show-comment-form">
+            <%= image_tag "default.png", id: "article-show-comment-form-image" %>
+            <div class="article-show-comment-form-login">
+              <%= link_to "ログインしてコメントする", new_user_session_path, class: "article-show-comment-login-btn" %>
+            </div>
+          </div>
         <% end %>
       </div>
        <%#div class="comment-box">

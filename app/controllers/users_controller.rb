@@ -9,7 +9,6 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find(params[:id])
-    @articles = @user.articles.status_public.order(created_at: :desc)
-    @unless_articles = Article.includes(:user).order('created_at DESC')
+    @articles = @user.articles.order(created_at: :desc)
   end
 end

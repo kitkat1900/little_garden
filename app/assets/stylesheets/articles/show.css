@@ -165,20 +165,17 @@
 
 }
 
-/* /商品の概要 */
-
-
-
-
-
-
-
 
 #article-show-comments {
   width: 90%;
   height: 80vh;
   margin: auto;
   overflow: scroll;
+}
+
+.article-show-comment-title {
+  font-size: 18px;
+  color: #818181;
 }
 
 .article-show-comment-contents {
@@ -319,5 +316,24 @@
 }
 
 .article-show-comment-btn:hover {
+  background-color: #ebeced;
+}
+
+.article-show-comment-form-login {
+  width: 90%;
+  height: 45px;
+}
+
+.article-show-comment-login-btn {
+  margin: 5px 10px;
+  text-align: center;
+  padding: 5px 10px;
+  color: #818181;
+  display: block;
+  border: 1px solid #00a400;
+  
+}
+
+.article-show-comment-login-btn:hover {
   background-color: #ebeced;
 }
