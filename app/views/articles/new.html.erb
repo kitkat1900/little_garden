@@ -34,7 +34,7 @@
         <div class="article-form-group">
           <label class="article-form-text">カテゴリー</label>
           <span class="indispensable">必須</span>
-          <%= f.collection_select(:category_id,Category.all, :id, :name, {}, {class:"select-box", id:"article-category"}) %>
+          <%= f.collection_select(:category_id,Category.all, :id, :name, {include_blank: "---"}, {class:"select-box", id:"article-category"}) %>
         </div>
 
         <div class="article-form-group">

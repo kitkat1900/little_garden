@@ -13,6 +13,7 @@ import '@fortawesome/fontawesome-free/js/all';
 require('../preview _user')
 require('../top.js')
 require('../article_preview')
+require('../category')
 
 
 

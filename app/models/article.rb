@@ -9,7 +9,7 @@ class Article < ApplicationRecord
 
   validates :article_name, length: { maximum: 20 }, presence: true
   validates :text, length: { maximum: 400 }, presence: true
-  validates :category_id, numericality: { other_than: 1 } 
+  validates :category_id, numericality: { greater_than_or_equal_to:1 ,less_than_or_equal_to:11, message: "を選んでください" }
   validates :status, inclusion: { in: Article.statuses.keys }
   validates :image, presence: true
 end

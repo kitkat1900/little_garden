@@ -130,13 +130,11 @@ function pullDown() {
     } else {
         pullDown9.setAttribute("style", "display:block;");
     }
-    console.log("preview.jsが読み込まれました");
    });
   commentBtn.addEventListener('mouseleave', function() {
     if (pullDown9) {
        pullDown9.removeAttribute("style", "display:block;");
     }
-    console.log("preview.jsが読み込まれました");
    });
 
  }

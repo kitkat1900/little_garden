@@ -3,10 +3,11 @@
   <div class="main">
     <%= render "shared/sidebar" %>
     <div class='index-main'>
+      <% breadcrumb :categories, @category %>
       <div class='index-contents'>
-         <%= breadcrumbs separator: " &rsaquo; " %>
+        <%= breadcrumbs separator: " &rsaquo; " %>
         <div class='index-sort'>
-          <span class='index-sort-title'>新着投稿</span>
+          <span class='index-sort-title'> <%= "#{@category.name} : #{@articles.count} 件" %></span>
         </div>
         <ul class='index-article-lists'>
           <% @articles.each do |article| %>
@@ -56,5 +57,3 @@
     <% end %>
   </div>
 </div>
-<% breadcrumb :root %>
-

@@ -65,6 +65,15 @@
   width: 100%;
 }
 
+.search-button {
+  display: flex;
+  align-items: center;
+}
+
+.send {
+  align-items: center;
+}
+
 .center-header {
   width: 350px;
 }
@@ -86,10 +95,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .header-icons:hover {
   background-color: #ebeced;
+  color: #818181;
+}
+
+.category-lists {
+  display: none;
+  border: 1px solid #00a400;
+  background-color: #d3d3d3;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.category-list {
+  padding: 5px;
+  border-radius: 10px;
+}
+ 
+.category-list:hover {
+  background-color: #ebeced;
+}
+
+.category-text {
   color: #818181;
 }
 

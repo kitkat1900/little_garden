@@ -5,14 +5,22 @@
       <%= link_to (image_tag "logo.png", class:"logo-img") , "/" %>
     </div>
     <div class='header-search-contents'>
-      <form class="header-search-form" action="#">
+
+      <%= search_form_for Article.ransack(params[:q]), url: search_articles_path, html: {class: "header-search-form"} do |f| %>
         <button class="header-search-button">
           <div class="header-search-icon" >
           <i class="fa-solid fa-magnifying-glass" style="color:grey;"></i>
           </div>
         </button>
-        <input class='header-input-box' placeholder='キーワードから検索'>
-      </form>
+        <%= f.text_field :article_name, placeholder: 'タイトルから検索', class: 'header-input-box' %>
+        <br>
+        <%= f.label :submit, class: "search-button", style: "display: none;" do %>
+          <input type="submit" value="検索" class="send">
+          <%= f.submit :submit, id: "q_submit", style: "display: none;"%>
+        <% end %>
+      <% end %>
+
+ 
     </div>
   </div>
 
@@ -30,9 +38,7 @@
       </li>
       <li>
         <div class="header-icons" id="category-btn">
-          <%= link_to root_path do %>
-            <i class="fa-solid fa-tags fa-2x fa-fw icon-a" style="color:black;"></i>
-          <% end %>
+          <i class="fa-solid fa-tags fa-2x fa-fw icon-a" style="color:black;"></i>
         </div>
         <div class="header-nav2 hidden" id="pull-down2">
           <span>カテゴリー</span>
@@ -58,6 +64,13 @@
           <span>質問掲示板</span>
         </div>
       </li>
+    </ul>
+    <ul class="category-lists" id="categories">
+      <% @categories.each do |category| %>
+        <li class="category-list">
+          <%= link_to category.name, categories_index_path(category.id), class: "category-text" %>
+        </li>
+      <% end %>
     </ul>
   </div>
 

@@ -1,12 +1,12 @@
+
 <div class= "app">
   <%= render "shared/header" %>
   <div class="main">
     <%= render "shared/sidebar" %>
     <div class='index-main'>
       <div class='index-contents'>
-         <%= breadcrumbs separator: " &rsaquo; " %>
         <div class='index-sort'>
-          <span class='index-sort-title'>新着投稿</span>
+          <span class='index-sort-title'>検索結果 <%= @articles.count %> 件</span>
         </div>
         <ul class='index-article-lists'>
           <% @articles.each do |article| %>
@@ -50,11 +50,21 @@
           <% end %>
         </ul>
       </div>
+      <div class='item-contents' id="detailed-search-result-wrapper">
+        <%= search_form_for @q, url: search_articles_path, html: {id: "detailed-search-form"} do |f| %>
+          <div class="search-field">
+            <%= f.label :category_id_in, 'カテゴリ' %>
+            <br>
+            <%= f.collection_check_boxes(:category_id_in, Category.all, :id, :name, {include_blank: "---"}) %>
+         </div>
+         <%= f.submit '検索' %>
+        <% end %>
+      </div>
     </div>
     <%= link_to(new_article_path, class: 'post-btn') do %>
       <i class="fa-solid fa-plus fa-2x fa-fw" style="color:white;"></i>
     <% end %>
   </div>
-</div>
-<% breadcrumb :root %>
+ 
 
+</div>

@@ -8,5 +8,11 @@ Rails.application.routes.draw do
   resources :users, only: :show
   resources :articles, only: [:new, :create, :show, :edit, :update, :destroy] do
     resources :comments, only: [:create, :destroy]
-   end
+      collection do
+        get 'search'
+      end
+  end
+  get 'categories/index'
+  resource :categories
+
 end
